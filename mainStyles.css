@@ -1,0 +1,154 @@
+.body {
+    margin: 0;
+}
+
+.topBanner {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(119, 128, 182);;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 10vh;
+    z-index: 100;
+}
+.mainBody {
+    display: grid;
+}
+
+.mainBodyTop {
+    margin-top: 4.5%;
+    margin-bottom: 15vh;
+    display: grid;
+    height: 75vh;
+    grid-template-columns: 75vh 1fr;
+}
+
+
+.mainBodyTopText {
+    display: flex;
+    align-content: space-evenly;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.mainBodyBottom {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    justify-content:center;
+    text-align: left;
+    align-items: center;
+}
+
+.mainBodyBottomSections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10%;
+}
+
+.MBS1a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.MBS1b {
+    border-radius: 20px;
+    background-color: slategray;
+    padding: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 25vw;
+}
+
+.MBS2a {
+    border-radius: 20px;
+    background-color: slategray;
+    padding: 5%;
+    padding-left: 20px;
+    padding-right: 20px; 
+    width: 25vw;
+}
+
+.MBS2b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.MBS3a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.MBS3b {
+    border-radius: 20px;
+    background-color: slategray;
+    padding: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 25vw;
+}
+
+.mainBodyBottomSections h4{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+.mainBodyBottomSections p{
+    text-align: justify;
+    cursor: default;
+}
+
+
+.topBanner p {
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.topLinks {
+    left:0;
+    display: inline-flex;
+    flex-flow: row-reverse;
+    align-content: flex-end;
+}
+
+.topBannerIcon {
+    margin-left: 5vh;
+    display: inline-flex;
+    align-content: center;
+    color: white;
+    cursor: default;
+}
+
+
+.topLinksButtons {
+    background-color: rgb(119, 128, 182);
+    max-width: 20vh;
+    padding-left: 20%vh;
+    padding-right: 20vh;
+    min-width: 5vh;
+    height: 10vh;
+    border: 0;
+}
+
+.topLinksButtons:hover{
+    background-color: rgb(137, 147, 207);
+    cursor: pointer;
+}

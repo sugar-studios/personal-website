@@ -1,0 +1,174 @@
+<!--
+    Alexander Calkins
+    Personal Website
+    9/1/2023
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--MetaData-->
+        <div>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        </div>
+
+        <!--Page Title-->
+        <title>Calkins</title>
+
+        <!--Style Sheets-->
+        <div>
+            <link rel="stylesheet" href="mainStyles.css">
+            <link rel="stylesheet" href="mainStylesAnimations.css">
+        </div>
+        
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8NDQ4NDw0QDQ0NDQ0NDQ0NEA8ODQ0OFREWFhURFhUYHCggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGQ8QGi0dHR0tMC4rLS0rLSstLSsrLi0tLS0tLS0vLS0rLS0rKy0tLS0tLS0tLSstLS0tLSsrLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAQIEBQYDB//EAEAQAAIBAQMHCAkCBQQDAAAAAAABAgMEEVMFFRYhkZLREjEyUVJxcrIGFDM0QWFjseEigSNDgqGiE0KTwQdEVP/EABoBAQEAAwEBAAAAAAAAAAAAAAABAwQFAgb/xAAtEQEAAQIFAwMFAAIDAQAAAAAAAQIRAwQSE1EUM2EVMkEhMVKR8CKxQoGhI//aAAwDAQACEQMRAD8A/cQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGnbsqULN7atCnfzJv9T7ktZ4qrpp+8smHg14nti7RpelFjm7oVeW/lFp7GYK83h0/e/6Z+ixvmH3z3R6pv+lcTH6hg+f0dFieDPdLsz2LiT1HB8nRYngz3S7M9i4j1HC8r0WJ4M9U+zPYuI9RwvKdFieDPVPsz2LiPUcLydFieDPVPsz2LiPUcLydFieDPVPsz2LiPUcLydFieFzzT7M9keI9RwvJ0eJ4M80+zPYuI9RwvJ0dfMGeafZnsjxHqOF5Ojr8GeafZnsjxHqOF5Ojr5gzxT7M9keI9RwvJ0dfMGeKfZnsjxHqOF5Ojr5gzxT7E9keI9RwvKdHXzC53p9meyPEeo4Pn9HSV8wyWVqfVNfsuJfUMHz+k6Svwzp5SpP/AHOPiT+5kpzmDV/yeZy+JHw24yTV6aafM1rRsxN/swTFlKAAAAAAAAHnfSbLzofwaL/itfqnzqmurvNXMY+j/Gn7t/KZXc/zq+3+3gLW3JuUm5Setyk7233mjE3m8uzTERFoaMtTvWp/LnR7eneyJlZyapVH+p6oT6/k/maeNgxH+UMVdPD0MTXswyySFkW4WS63CxcuFkW4WFuFkuXCxdbhZLryRYuckti63CyXW4WS68kWLryRZLqoiyXbFlrypvVzPnj8DZy+Yqwp+n24YsXDiuHZpzUkmuZndoriumKoc+YmJtLI9IAAAAAB8rXXVKnUqPmpwlN/srzzVVpiZn4eqKdVUUx8vzSvKU5SnJ3ym3KT+bOJNU1TeX0dFMUxFMfDSrxPUS9ufVRkuXfDlNO9O5p3pklXucm2j/Vown2o6+/mZqVU2lgqj6txM82Y2V4siiwt4sheLIt4sLeLBeLIt4sLeLIt5bC3iyCZLC3lsi3iyWZJiyS6OTautx69a7zo5CubzR/21MxT8ugdNqgAAAAAauU7M61CpSjJRc43Jvm5zxiU6qZpj5ZMKuKK4qn4eafopWf82n/lwNDoavydL1Gn8ZfGp6G1pfzqeyZ6jJVcnqNP4y1qnoHWf/sUl/TM9dJPK+o0/jL5P/x7W/8Appbkx0k8nqVH4y+9kyfKyJ2eU1OVOTvlFNJ33S+PeaGPRormlsUYsYtOuPpdtowqqCMggEUAiihFvILeWyKEAKBQioIoFQRu5Nf8Rdz+xs5Puw1sx7HXOy0QAAAAAAAAAAAeUyn7zW8UfJE42b7suzlOzH98vijWZmQRQARRYVBFABFAoRSgRFFhULIpRkiI3Mm+0Xc/sbWU7sNfMex1zsNAAAAAAAAAAAAHlMp+81vFHyRONm+7Ls5Xsx/fL5I12ZkRAqKBUEUiKUALcEUChAChFAqQRUElu5N9ou5/Y2cp3Ya+Y9jrHYaIAAAAAAAAAAAPK5S95reKPkicfN92XYyvZj++XyRrMzIIFRUgKRFAFGSIgBQigCooFCKBUHmW7k72i7n9jZyndhgx/a6p12iAAAAAAAAAAADy2Uvea3ij5InHzfdl2Mr2Y/vl8ka7LLIIqQFCAFuKikAIpRQgQUooAIoRkiI3MndNdz+xs5Tuw18f2uqddpAAAAAAAAAAAA8vlL3mt4o+SJyM13ZdfK9qP75fJGszSyDyoFKgBQigAigW4CgAigAigZII3Mn9Ndz+xs5Xuw18f2uodZpAAAAAAAAAAAA8vlH3mt4o+SJyM13ZdfLdqP75fNGuyywtFaNOEpy6MVe7ud/IERf6OXpBHCltRLsm15XSCOFLahdNryukEcKW1C5szyaQRwpbULmzPK6QRwpbyFzZnldII4UtqFzZnlV6QRwpbULmxPJpBHCltQumxPK5/jhS2oXNieVz/HCltQubE8rn+OFLeRLmxPLOll2EpJOEopu7lXp3F1JOBNvu66R6a7JBG3k/pruf2NjK92GDH9rqHWaQAAAAAAAAAAAPMZQ94reKPkicnNd2XWy3aj++XzRrsrG0UI1IShLoyVz6+8ETabuVo9DFlsiSzJuyuj0cWWxC0G9PBo9HFlsQsb08Lo9HFlsiLJvTwaPRxZbELQb08KvR6OLLZEWg354XR6OLLZEaYN+eF0fjiy2IaTfng0ejiy2IaYOonhdHo4stkRphOonhdHo4stkRpOonhnRyDCMk3OUknfybkrxphJx5t9nYKwKgjcsHTXczYyvdhr4/tdM6zTAAAAAAAAAAAB5nKHvFbxx8kTk5ruy62W7Uf3y+aNdlZJBFCBRQigAigUIAW4CgAigUIqCNuwdNdz+xsZXuwwY3tdM6rTAAAAAAAAAAAB5q3+8VfEvJE5Oa7sutlu1D5owMkvhlGrKnRnKCvklq+N2vW7gUxEz9XmM518aW1Hi8trRTwZzr40tqBop4M518aW1D6minhc518aW1D6minhc518aW1A26eFznXxpbUDbp4M518aW1A26eFznXxpbUS8m3Twuc62NLaheTbp4XOdbGltQvJt08Gc6+NLaheTbp4fWzZUr8uP8AEc/1Jcl61LXzC8pOFRb7PWmVz2SIjbsPTX7/AGNjK9yGDG9rpHVagAAAAAAAAAAAPNW/3ir4l5InKzPdl1cv2oYI12RkUYerw7Ed1ETVJ6vDsR3UUvJ6vDDjuoF5X1eGHDdQNUr6vTw47qBqnk9Xhhx3UE1Tyvq8OxHdQNU8r6vDDjuoJqnk9Xhhx3UDVPK+rww47qBqnk9Xhhx3UE1TyyjRgneoRT60kmEmqX0CMkEbdh6a/f7GfLd2GDG9ronVagAAAAAAAAAAAPN273ir4l5InKzPdl1cv2o/vlgjAyK2km27ktbb5kgjVzpQxokvD1t1cGdLPjRF4Nurhc6WfGiLwbdXBnShjRF4Tbq4XOlDGiNUG3VwudLPjR2jVBt18GdLPjRF4Tbr4XOdDGiLwbVfBnShixF4Nqvhc6UMaIvBtV8LnShixF4Tar4Z0rfRnJRjVi2+ZX84vCTh1RF5htFeFQRt2Hp/sbGW7kMGN7XROo1AAAAAAAAAAAAebt3vFXxryROXme5Lq5ftR/fLFGuyPhb7O61KdNPkuS1P4X336xMFM2m7zmYrR2Y7yPGlsbtK5itHZjvIuiTepMx2jsx3kNErvUqshWjsx3kNMpvUmYrR2Y76Jpk3qFzHaOzHeQ0yb1BmK0dmO8hpk3qFzFaOzHeQ0yb9C5jtHZjvIaJN+hcx2jsx3kNEm/QZjtHZjvIaJN+h9KGQq/KjeoxSablyk2tfyGiUnHos9SZGiyQRt2HpGfLdyGDG9roHUaoAAAAAAAAAAAPOW33ir415InLzPcl1Mv2o/vlgjAyMkgihFAAUIFAgyCAFCAFABFQFQRt2LpGfLdyGDG9roHUaoAAAAAAAAAAAPO2729XxLyo5mZ7kupl+1DBGuyS+dstCo05VGr1Fcy52/ggUxebOHpJLBjvPgeNTPsRyaSSwY7z4DUbEcrpJLCjvPgNZsRyaSSwY7z4DXJ08crpJLBjvPgNcnTxyaSSwY7zGuU6eOV0klgx3nwJqk6eOW/knK/rEnBw5EkuUrnemvieoqux4mDoi8OqemBQAQAqCMkBtWLpGfLdyGDG9roHUaoAAAAAAAAAAAPO2329XxLyROZmO5LqZftQxRge5Y1aUZxcJK+Mlc18gRNpvDm6PUOue8uB50wyb9Ro9Q66m8uA0wb9S6PUOupvLgNMG/UujtDrqby4DTBv1Gj1Drqby4E0wm/UaO0OupvLgXTBv1Lo9Q66m8uA0wdRU27BkylQbcE3Jq6+TvaXUhERDxXiVV/dulYwqBBQKgioDasXSM+W7kMGL7XQOo1QAAAAAAAAAAAeetvt6viXkiczMdyXTwO1DBGBkZIIAUIqIigAAFCBBSgLoAUCoIqA2rF0jPlu5DBi+10DqNUAAAAAAAAAAAHnrZ7er4l5YnMzHcl08DtQxRge1ABFAt5EEFCIoAAEUCgAigVBFQRtWLpGxlu5DDi+10DqNUAAAAAAAAAAAHnrZ7er4l5YnMzHcl08DtQxRge2SCAAAeQJcLzzcBcW8XC8XRRcLxcW8XRbxcVMXRUW6NuxdLabOV7kMGN7XQOq1QAAAAAAAAAAAcC3Rur1Pm4v/AARzMz3JdLAn/wCcMEjA9srgFwuly4lxLjxMq05ZSoJtOqr02mtbuZ4mpkjDqn4M50MRbJcDzqXar4M5UcRbJcCaoNqvgzlRxFslwGuDar4XOVHEWyXAa4NqvgznRxFslwGqE2a+FznRxFslwGuDar4M50cRbJcBrg2a+FzlRxFslwGuE2a+FznRxFslwGuDZr4VZToYi2S4F1wmxXw2LLlizxle6qu7pcDPlsaiiuJmWLFy2JNP0hvZ+suMt2fA6XWYP5f7a3R434mfrLjLdnwHWYP5f7OjxvxblltUK0eVTkpxTubXwfV/cz4eJTXF6Zuw14dVE2qiz7Ht4AAAAAAAAOTlejdONX4NciXya1p/3f8AY083R9qm5la/vS1Ymi2JZ3ERGQfOc7iTL1ENevalCMpPmjFs8TLJFF3k6dN8753rfe+cTS3H0UCaVuvIGkucgaS68gaS5yCaS68gaS5yGNJdeQxpLnIGguvIY0FzkMaC68gmkuqgNBd7b0ZoOnZot6nUlKp+zuS/skdnJ0acKPP1cTO16sWfH0dU2moAAAAAAAAY1aanFxkr01c0SYiYtKxMxN4cetZZUn8ZQ+Ekta7zm42Xqp+tP1hvUY0V+JYRknzO/uNSarMlkk0edSxDTtVVRWtpEiZn7M1EOLa6/L/T/tWvvZnowZ+8s8Uviooybb2tyG2GobYaibYuobYahthqG2LqG2GobchqG2F6G3IXobYqa5lrfUtbG1Jezs5JyJOrJTqRcKa13PVKfyu+CM+Hlbzer7NLHzlNMWo+svWRikkkrklcl1I6DkTN1AAAAAAAAAAAGvUsVKWt043v4rU9qPFWHRV94u904ldP2lr1MjUJfCa7qtXieOnw/wAYZYzWJHz/AOQ1p+jVmlrf+p/ySf3PcYdMfaHuM7ixx+mOi9m+pv8A4Lpp4XrsXx+jRezfU3/wNNPB12L4/RovZvqb/wCBpp4OuxfH6NF7N9Tf/A008HXYvj9Gi9m+pv8A4Gmng67F8fo0Xs31N/8AA008HXYvj9Gi9m+pv/gaaeDrsXx+jRezfU3/AMDTTwddi+P0aL2b6m/+Bpp4OuxfH6NF7N9Tf/A008HXYvj9Gi9m+pvsaaeDrsXx+mS9GbL2ZvvqS/6JohOtxef/AB9Yej9kj/Jv8Upy+7Loh4nN40/8m7QsdKn0KUIeGKRbQxVYlVX3m77leAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//Z">
+    </head>
+
+    <body class="body">
+
+        <!-- Top Banner-->
+        <header>
+            <div class="topBanner">
+                <!--My Name-->
+                <div class="topBannerIcon">
+                    <p>Alexander Calkins</p>
+                </div>
+
+                <!--Banner Links-->
+                <div class="topLinks">   
+                    <a href="https://www.google.com" target="_blank">
+                        <button class="topLinksButtons">
+                            <p>LinkedIn</p>
+                        </button> 
+                    </a>
+
+                    <a href="https://www.google.com" target="_blank">
+                        <button class="topLinksButtons">
+                            <p>GitHub</p>
+                        </button> 
+                    </a>
+
+                    <a href="https://www.google.com" target="_blank">
+                        <button class="topLinksButtons">
+                            <p>Project</p>
+                        </button> 
+                    </a>
+                    
+                    <a href="#about" target="_self">
+                        <button class="topLinksButtons">
+                            <p>About</p>
+                        </button> 
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+        <!--Main Body of page-->
+        <div id="mainBody">
+            <!--Dashboard top-->
+            <div class="mainBodyTop">
+                <!--DashBoard Picture-->
+                <div>
+                    <picture> 
+                        <img style="height: 100%; width: 75vh;" src="images/MainPage/mickeyMouse.png">
+                    </picture>
+                </div>
+
+                <!--Hello world text :)-->
+                <div class="mainBodyTopText">
+                    <h3 id="introText" >Hello There!</h3>
+                </div>
+            </div>
+
+            <div>
+               <hr>  
+            </div>
+           
+
+            <!--Mini articles-->
+            <div class="mainBodyBottom">
+                <div class="mainBodyBottomSections"  class="card">
+                    <!--about section-->
+                    <div class="MBS1a">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hxIGIRPVvvpnSQjDGNI0undzKEHbVYvWe-7bvt9W4A&s" alt="">
+                    </div>
+                    <div id="about" class="MBS1b">
+                        <h4>About</h4> 
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
+                            Vestibulum sagittis vel dolor sit amet semper. Proin metus leo, maximus ac massa eget, lacinia feugiat nibh. 
+                            Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
+                            Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
+                            lorem non feugiat tempus, lorem diam faucibus dolor, ut consequat massa quam ut neque. Cras mollis purus tortor, 
+                            in dictum dolor ullamcorper id.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
+                            Vestibulum sagittis vel dolor sit amet semper. Proin metus leo, maximus ac massa eget, lacinia feugiat nibh. 
+                            Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
+                            Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
+                            lorem non feugiat tempus, lorem diam faucibus dolor, ut consequat massa quam ut neque. Cras mollis purus tortor, 
+                            in dictum dolor ullamcorper id.   
+                        </p>
+                    </div>    
+                </div>
+
+                <div class="mainBodyBottomSections"  class="card">
+                    <!--Why Section-->
+                    <div  class="MBS2a">
+                        <h4>Why</h4>  
+                    
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
+                            Vestibulum sagittis vel dolor sit amet semper. Proin metus leo, maximus ac massa eget, lacinia feugiat nibh. 
+                            Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
+                            Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
+                            lorem non feugiat tempus, lorem diam faucibus dolor, ut consequat massa quam ut neque. Cras mollis purus tortor, 
+                            in dictum dolor ullamcorper id.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
+                            Vestibulum sagittis vel dolor sit amet semper. Proin metus leo, maximus ac massa eget, lacinia feugiat nibh. 
+                            Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
+                            Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
+                            lorem non feugiat tempus, lorem diam faucibus dolor, ut consequat massa quam ut neque. Cras mollis purus tortor, 
+                            in dictum dolor ullamcorper id.  
+                        </p>
+                    </div>
+                    <div class="MBS2b">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hxIGIRPVvvpnSQjDGNI0undzKEHbVYvWe-7bvt9W4A&s" alt="">
+                    </div>
+                </div>
+
+                <div class="mainBodyBottomSections"  class="card">
+                    <!--New Stuff Section-->
+                    <div  class="MBS3a">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hxIGIRPVvvpnSQjDGNI0undzKEHbVYvWe-7bvt9W4A&s" alt="">
+                    </div>
+                    <div  class="MBS3b">
+                        <h4>New stuff</h4>
+                    
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
+                            Vestibulum sagittis vel dolor sit amet semper. Proin metus leo, maximus ac massa eget, lacinia feugiat nibh. 
+                            Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
+                            Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
+                            lorem non feugiat tempus, lorem diam faucibus dolor, ut consequat massa quam ut neque. Cras mollis purus tortor, 
+                            in dictum dolor ullamcorper id.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
+                            Vestibulum sagittis vel dolor sit amet semper. Proin metus leo, maximus ac massa eget, lacinia feugiat nibh. 
+                            Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
+                            Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
+                            lorem non feugiat tempus, lorem diam faucibus dolor, ut consequat massa quam ut neque. Cras mollis purus tortor, 
+                            in dictum dolor ullamcorper id.  
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>
