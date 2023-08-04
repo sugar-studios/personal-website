@@ -27,7 +27,6 @@
 
         <!--JavaScript-->
         <div>
-            <script src="/javascript/mainPage.js"></script>
         </div>
         
         <!--Favicon-->
@@ -38,7 +37,7 @@
 
         <!-- Top Banner-->
         <header>
-            <div class="topBanner">
+            <div class="topBanner slide-in-from-top">
                 <!--My Name-->
                 <div class="topBannerIcon">
                     <p>Alexander Calkins</p>
@@ -87,18 +86,13 @@
 
                 <!--Hello world text :)-->
                 <div class="mainBodyTopText">
-                    <h3 id="introText" >Hello There!</h3>
+                    <h3 id="introText" ></h3>
                 </div>
             </div>
-
-            <div>
-               <hr>  
-            </div>
            
-
             <!--Mini articles-->
             <div class="mainBodyBottom">
-                <div class="mainBodyBottomSections"  class="card">
+                <div class="mainBodyBottomSections card">
                     <!--about section-->
                     <div class="MBS1a">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hxIGIRPVvvpnSQjDGNI0undzKEHbVYvWe-7bvt9W4A&s" alt="">
@@ -122,7 +116,7 @@
                     </div>    
                 </div>
 
-                <div class="mainBodyBottomSections"  class="card">
+                <div class="mainBodyBottomSections card">
                     <!--Why Section-->
                     <div  class="MBS2a">
                         <h4>Why</h4>  
@@ -147,7 +141,7 @@
                     </div>
                 </div>
 
-                <div class="mainBodyBottomSections"  class="card">
+                <div class="mainBodyBottomSections card">
                     <!--New Stuff Section-->
                     <div  class="MBS3a">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hxIGIRPVvvpnSQjDGNI0undzKEHbVYvWe-7bvt9W4A&s" alt="">
@@ -175,5 +169,43 @@
             </div>
 
         </div>
+
+        <script>
+            const startAnimation = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                entry.target.classList.add("slide-in-from-right");
+                observer.unobserve(entry.target); // Remove the observer once animation is played
+                }
+            });
+            };
+
+            const observer = new IntersectionObserver(startAnimation);
+            const options = { root: null, rootMargin: '0px', threshold: 1 }; 
+
+            const elements = document.querySelectorAll('.card');
+            elements.forEach(el => {
+            observer.observe(el, options);
+            });
+
+        </script>
+        <script>
+            // JavaScript code for the typing animation
+            const text = "Hello There!";
+            const animationSpeed = 50; // Adjust the typing speed (lower value means faster)
+        
+            const typingAnimation = document.getElementById("introText");
+        
+            let i = 0;
+            function typeText() {
+                if (i < text.length) {
+                typingAnimation.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeText, animationSpeed);
+                }
+            }
+        
+            typeText();
+        </script>
     </body>
 </html>

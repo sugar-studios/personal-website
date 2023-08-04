@@ -1,5 +1,6 @@
 .body {
     margin: 0;
+    background-color: #153142;
 }
 
 .topBanner {
@@ -8,7 +9,7 @@
     margin: 0;
     top: 0;
     width: 100%;
-    background-color: rgb(119, 128, 182);;
+    background-color: #1B4965;
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 10vh;
@@ -28,6 +29,7 @@
 
 
 .mainBodyTopText {
+    color: white;
     display: flex;
     align-content: space-evenly;
     justify-content: center;
@@ -50,7 +52,7 @@
 .mainBodyBottomSections {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 50%;
+    width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 10%;
 }
@@ -64,20 +66,20 @@
 
 .MBS1b {
     border-radius: 20px;
-    background-color: slategray;
+    background-color: #CAE9FF;
     padding: 5%;
     padding-left: 20px;
     padding-right: 20px;
-    width: 25vw;
+    width: 50%;
 }
 
 .MBS2a {
     border-radius: 20px;
-    background-color: slategray;
+    background-color: #CAE9FF;
     padding: 5%;
     padding-left: 20px;
     padding-right: 20px; 
-    width: 25vw;
+    width: 50%;
 }
 
 .MBS2b {
@@ -96,11 +98,11 @@
 
 .MBS3b {
     border-radius: 20px;
-    background-color: slategray;
+    background-color: #CAE9FF;
     padding: 5%;
     padding-left: 20px;
     padding-right: 20px;
-    width: 25vw;
+    width: 50%;
 }
 
 .mainBodyBottomSections h4{
@@ -139,16 +141,17 @@
 
 
 .topLinksButtons {
-    background-color: rgb(119, 128, 182);
+    background-color: #1B4965;
     max-width: 20vh;
     padding-left: 20%vh;
     padding-right: 20vh;
     min-width: 5vh;
     height: 10vh;
     border: 0;
+    transition: background-color 1s ease-out;
 }
 
 .topLinksButtons:hover{
-    background-color: rgb(137, 147, 207);
+    background-color: #20597c;
     cursor: pointer;
 }

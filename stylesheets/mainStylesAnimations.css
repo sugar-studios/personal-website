@@ -1,37 +1,60 @@
-#introText {
-    font-size: 7vh;
-    font-family: Tahoma, sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100vh;
-    animation: type 4s steps(200, end);
-    cursor: default;
-    z-index: -1;  
+#introTextContainer {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100vh;
+  z-index: -1;  
 }
 
-@keyframes type {
-    from { width: 0; } 
-    0% {opacity: 0;}
-    50% {opacity: .85;}
-    100% {opacity: 1;} 
+#introText {
+  font-size: max(7vh, 7vw);
+  font-family: Tahoma, sans-serif;
+  cursor: default;
 }
 
 .card {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-in-from-right {
+  animation: 1s ease-out 0s 1 slideInFromRight forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0.0;
+    transform: translateX(50%);
   }
+
+  9% {
+    opacity: 0.0;
+    transform: translateX(50%);
+  }
+
+  10% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-top {
+    animation: 1s ease-out 0s 1 slideInFromTop forwards;
+}
   
-  .slide-in-from-right {
-    animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0.0;
+    transform: translateY(-50%);
   }
-  
-  @keyframes slideInFromRight {
-    0% {
-      transform: translateX(50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
