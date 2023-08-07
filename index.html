@@ -23,6 +23,9 @@
         <div>
             <link rel="stylesheet" href="stylesheets/mainStyles.css">
             <link rel="stylesheet" href="stylesheets/mainStylesAnimations.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&display=swap" rel="stylesheet">
         </div>
 
         <!--JavaScript-->
@@ -116,7 +119,7 @@
                     </div>    
                 </div>
 
-                <div class="mainBodyBottomSections card">
+                <div class="mainBodyBottomSections card2">
                     <!--Why Section-->
                     <div  class="MBS2a">
                         <h4>Why</h4>  
@@ -172,27 +175,32 @@
 
         <script>
             const startAnimation = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add("slide-in-from-right");
-                observer.unobserve(entry.target); // Remove the observer once animation is played
-                }
-            });
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains("card2")) {
+                            entry.target.classList.add("slide-in-from-left");
+                        } else if (entry.target.classList.contains("card")){
+                            entry.target.classList.add("slide-in-from-right");
+                        } else {
+                            entry.target.classList.add("slide-in-from-bottom");
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
             };
 
             const observer = new IntersectionObserver(startAnimation);
             const options = { root: null, rootMargin: '0px', threshold: 1 }; 
 
-            const elements = document.querySelectorAll('.card');
+            const elements = document.querySelectorAll('.card, .card2, .card3');
             elements.forEach(el => {
-            observer.observe(el, options);
+                observer.observe(el, options);
             });
-
         </script>
+
         <script>
-            // JavaScript code for the typing animation
             const text = "Hello There!";
-            const animationSpeed = 50; // Adjust the typing speed (lower value means faster)
+            const animationSpeed = 50;
         
             const typingAnimation = document.getElementById("introText");
         
