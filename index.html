@@ -30,6 +30,7 @@
 
         <!--JavaScript-->
         <div>
+            <script src="javascript/mainPageFunctions.js"></script>
         </div>
         
         <!--Favicon-->
@@ -108,8 +109,7 @@
                             Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
                             Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
                             lorem non feugiat tempus, lorem diam faucibus dolor, ut consequat massa quam ut neque. Cras mollis purus tortor, 
-                            in dictum dolor ullamcorper id.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
+                            in dictum dolor ullamcorper id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra sapien ac imperdiet laoreet. 
                             Vestibulum sagittis vel dolor sit amet semper. Proin metus leo, maximus ac massa eget, lacinia feugiat nibh. 
                             Proin id tellus quis lacus facilisis accumsan in viverra ipsum. Phasellus fermentum euismod condimentum. 
                             Pellentesque egestas felis congue vehicula feugiat. Phasellus commodo imperdiet luctus. Pellentesque vulputate, 
@@ -172,48 +172,21 @@
             </div>
 
         </div>
+        <div id="bottomSection" class="card3">
+            <p>Alexander Calkins</p>
+            <a href="">Help?</a>
+            <a href="">Github</a>
+            <a href="">LinkedIn</a>
+            <a href=""></a>
+        </div>
 
+
+        </div>
         <script>
-            const startAnimation = (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        if (entry.target.classList.contains("card2")) {
-                            entry.target.classList.add("slide-in-from-left");
-                        } else if (entry.target.classList.contains("card")){
-                            entry.target.classList.add("slide-in-from-right");
-                        } else {
-                            entry.target.classList.add("slide-in-from-bottom");
-                        }
-                        observer.unobserve(entry.target);
-                    }
-                });
-            };
-
-            const observer = new IntersectionObserver(startAnimation);
-            const options = { root: null, rootMargin: '0px', threshold: 1 }; 
-
-            const elements = document.querySelectorAll('.card, .card2, .card3');
-            elements.forEach(el => {
-                observer.observe(el, options);
+            document.addEventListener('DOMContentLoaded', function() {
+                Typer();
+                SlideAnimations();
             });
-        </script>
-
-        <script>
-            const text = "Hello There!";
-            const animationSpeed = 50;
-        
-            const typingAnimation = document.getElementById("introText");
-        
-            let i = 0;
-            function typeText() {
-                if (i < text.length) {
-                typingAnimation.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeText, animationSpeed);
-                }
-            }
-        
-            typeText();
         </script>
     </body>
 </html>
