@@ -92,17 +92,15 @@
 }
 
 .slide-in-from-bottom {
-  animation: 1s ease-out 0s 1 slideInFromBottom forwards;
+  animation: 3s ease-out 0s 1 slideInFromBottom forwards;
 }
 
 @keyframes slideInFromBottom {
 0% {
-  opacity: 0.5;
-  transform: translateY(50%);
+  opacity: 0.0;
 }
 
 100% {
-  transform: translateY(0);
   opacity: 1;
 }
 }
