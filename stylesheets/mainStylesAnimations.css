@@ -92,7 +92,7 @@
 }
 
 .slide-in-from-bottom {
-  animation: 3s ease-out 0s 1 slideInFromBottom forwards;
+  animation: 2s 0s 1 slideInFromBottom forwards;
 }
 
 @keyframes slideInFromBottom {
