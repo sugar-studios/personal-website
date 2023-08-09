@@ -31,6 +31,7 @@
         <!--JavaScript-->
         <div>
             <script src="javascript/mainPageFunctions.js"></script>
+            <script>history.scrollRestoration = "manual"</script>
         </div>
         
         <!--Favicon-->
@@ -67,7 +68,7 @@
                         </button> 
                     </a>
                     
-                    <a href="#about" target="_self">
+                    <a href="" target="_blank">
                         <button class="topLinksButtons">
                             <p>About</p>
                         </button> 
@@ -89,6 +90,8 @@
             </div>
            
             <!--Mini articles-->
+            <div id="aboutSection"></div>
+
             <div class="mainBodyBottom">
                 <div class="mainBodyBottomSections card">
                     <!--about section-->
@@ -176,19 +179,20 @@
             <br>
             <hr>
             <br>
-            <div style="border-radius: 10x; opacity:.8;">
-               <img style="height: 5vh; width: 100%" src="images/MainPage/SugarStudiosLogo.png" alt="logo"> 
+            <div class="logoImageContainer">
+               <img src="images/MainPage/SugarStudiosLogo.png" alt="logo"> 
             </div>
             
         </div>
 
-
-        </div>
+        <canvas id="particle-canvas"></canvas>
+        <script src="javascript/mainPageBackgroundParticles.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 Typer();
                 SlideAnimations();
             });
         </script>
+    
     </body>
 </html>

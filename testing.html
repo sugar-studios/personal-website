@@ -1,51 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Roulette Wheel</title>
-    <style>
-        .wheel {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 50px auto;
-            border-radius: 50%;
-            background: -webkit-linear-gradient(-90deg, #f9dd62, #ec4e20);
-            background: linear-gradient(-90deg, #f9dd62, #ec4e20);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        .number {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            font: bold 20px Arial, sans-serif;
-            color: #fff;
-            text-align: center;
-            line-height: 60px;
-            border-radius: 50%;
-            background-color: #333;
-            transform-origin: 50% 205px;
-            animation: spin 3s ease-out;
-        }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reactive Background Particles</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Keep the canvas below the particles */
+  }
+  #particle-canvas {
+    background-color: black;
+    position: relative;
+    z-index: 1; /* Particles have a higher z-index */
+  }
+</style>
 </head>
 <body>
-    <div class="wheel">
-        <div class="number" style="transform: rotate(0deg);">0</div>
-        <div class="number" style="transform: rotate(30deg);">32</div>
-        <div class="number" style="transform: rotate(60deg);">15</div>
-        <div class="number" style="transform: rotate(90deg);">19</div>
-        <div class="number" style="transform: rotate(120deg);">4</div>
-        <div class="number" style="transform: rotate(150deg);">21</div>
-        <div class="number" style="transform: rotate(180deg);">2</div>
-        <div class="number" style="transform: rotate(210deg);">25</div>
-        <div class="number" style="transform: rotate(240deg);">17</div>
-        <div class="number" style="transform: rotate(270deg);">34</div>
-        <div class="number" style="transform: rotate(300deg);">6</div>
-        <div class="number" style="transform: rotate(330deg);">27</div>
-    </div>
+<canvas id="particle-canvas"></canvas>
+<script>
+  const canvas = document.getElementById('particle-canvas');
+  const context = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  class Particle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.size = Math.random() * 5 + 1;
+      this.speedX = Math.random() * 3 - 1.5;
+      this.speedY = Math.random() * 3 - 1.5;
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if (this.size > 0.2) this.size -= 0.1;
+    }
+    draw() {
+      context.fillStyle = 'white';
+      context.beginPath();
+      context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      context.fill();
+    }
+  }
+
+  const particles = [];
+
+  function init() {
+    for (let i = 0; i < 50; i++) {
+      particles.push(new Particle(canvas.width / 2, canvas.height / 2));
+    }
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    for (const particle of particles) {
+      particle.update();
+      particle.draw();
+    }
+  }
+
+  init();
+  animate();
+
+  canvas.addEventListener('mousemove', (event) => {
+    const { clientX, clientY } = event;
+    particles.push(new Particle(clientX, clientY));
+  });
+</script>
 </body>
 </html>
