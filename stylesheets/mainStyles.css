@@ -4,6 +4,22 @@
     overflow-x: hidden;
 }
 
+a:link {
+    text-decoration: none;
+  }
+
+a:visited {
+    text-decoration: none;
+  }
+
+a:hover {
+    text-decoration: none;
+  }
+
+a:active {
+    text-decoration: none;
+  }
+
 .topBanner {
     font-family: IBM Plex Sans Condensed;
     position: fixed;
@@ -17,6 +33,49 @@
     grid-template-columns: 1fr 1fr;
     height: 10vh;
     z-index: 100;
+}
+
+.topBanner p {
+    color: white;
+    font-size: 2vw;
+    font-family: IBM Plex Sans Condensed;
+}
+
+.topLinks {
+    left:0;
+    display: inline-flex;
+    flex-flow: row-reverse;
+    align-content: flex-end;
+    align-items: center;
+}
+
+.topBannerIcon {
+    margin-left: min(5vh, 1vh);
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    cursor: default;
+}
+
+
+.topLinksButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B4965;
+    max-width: 10vw;
+    padding-left: min(15vh, 5vh);
+    padding-right: min(15vh, 5vh);
+    min-width: 1vw;
+    height: 10vh;
+    border: 0;
+    transition: background-color 0.5s ease-out;
+}
+
+.topLinksButtons:hover{
+    background-color: #20597c;
+    cursor: pointer;
 }
 .mainBody {
     display: grid;
@@ -54,11 +113,13 @@
 }
 
 .mainBodyBottomSections {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-family: IBM Plex Sans Condensed;
     margin-bottom: 10%;
+    flex-direction: row;
 }
 
 .MBS1a {
@@ -121,45 +182,6 @@
     cursor: default;
 }
 
-
-.topBanner p {
-    color: white;
-    font-size: 30px;
-    font-family: IBM Plex Sans Condensed;
-}
-
-.topLinks {
-    left:0;
-    display: inline-flex;
-    flex-flow: row-reverse;
-    align-content: flex-end;
-}
-
-.topBannerIcon {
-    margin-left: 5vh;
-    display: inline-flex;
-    align-content: center;
-    color: white;
-    cursor: default;
-}
-
-
-.topLinksButtons {
-    background-color: #1B4965;
-    max-width: 20vh;
-    padding-left: 20%vh;
-    padding-right: 20vh;
-    min-width: 5vh;
-    height: 13vh;
-    border: 0;
-    transition: background-color 0.5s ease-out;
-}
-
-.topLinksButtons:hover{
-    background-color: #20597c;
-    cursor: pointer;
-}
-
 #bottomSection {
     margin-top: 10vh;
     height: 25vh;
@@ -197,36 +219,62 @@
     margin-bottom: 25vh;
 }
 
-/* width */
 ::-webkit-scrollbar {
     width: 20px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey; 
     border-radius: 10px;
-  }
+}
    
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #5FA8D3; 
     border-radius: 10px;
-  }
+}
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #69bbeb; 
-  }
+}
 
-  canvas {
+#bottomSection a:link {
+    text-decoration: underline;
+}
+
+#bottomSection a:visited {
+    text-decoration: underline;
+}
+
+#bottomSection a:hover {
+    text-decoration: underline;
+}
+
+#bottomSection a:active {
+    text-decoration: underline;
+}
+
+canvas {
     z-index: -50;
     background-color:#153142;
     position: fixed;
     top: 0;
     left: 0;
-  }
+}
 
-  html {
+html {
     scroll-behavior: smooth;
-  }
+}
+
+@media screen and (max-width: 480px) {
+    .mainBodyBottomSections{ flex-direction: column};
+    .MBS1b{ width: 50vh};
+    .MBS2a{ width: 50vh};
+    .MBS3b{ width: 50vh};
+}
+
+@media screen and (min-width: 480px) {
+    .mainBodyBottomSections{ flex-direction: row};
+    .MBS1b{ width: 50%};
+    .MBS2a{ width: 50%};
+    .MBS3b{ width: 50%};
+}

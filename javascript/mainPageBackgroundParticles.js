@@ -7,7 +7,7 @@ class Particle {
 constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.size = Math.random() * 5 + 1;
+    this.size = Math.random() * 2 + 1;
     this.speedX = Math.random() * 3 - 1.5;
     this.speedY = Math.random() * 3 - 1.5;
 }
@@ -47,5 +47,4 @@ animate();
 addEventListener('mousemove', (event) => {
 const { clientX, clientY } = event;
 particles.push(new Particle(clientX, clientY));
-console.log('hey');
 });
