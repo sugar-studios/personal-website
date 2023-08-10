@@ -13,6 +13,7 @@
     width: 100%;
     background-color: #1B4965;
     display: grid;
+    place-content: center;
     grid-template-columns: 1fr 1fr;
     height: 10vh;
     z-index: 100;
