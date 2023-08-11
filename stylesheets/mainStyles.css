@@ -207,6 +207,8 @@ a:active {
     align-items: center;
     justify-content: center;
     color: white;
+    transition: opacity 1s ease;
+    opacity: 0;
 }
 
 #bottomSection p{
