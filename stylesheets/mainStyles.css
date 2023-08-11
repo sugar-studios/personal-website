@@ -113,6 +113,18 @@ a:active {
 }
 
 .mainBodyBottomSections {
+    transform: translate(100%, 0); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: IBM Plex Sans Condensed;
+    margin-bottom: 10%;
+    flex-direction: row;
+}
+
+#midMainBodyBottomSections {
+    transform: translate(-100%, 0);
     display: flex;
     justify-content: center;
     align-items: center;
