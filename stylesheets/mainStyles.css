@@ -183,8 +183,10 @@ a:active {
 }
 
 #bottomSection {
+    bottom: 0;
     margin-top: 10vh;
-    height: 25vh;
+    margin-bottom: 0;
+    height: 28vh;
     padding: 1%;
     background-color: #1B4965;
     font-family: IBM Plex Sans Condensed;
@@ -196,11 +198,13 @@ a:active {
 }
 
 #bottomSection p{
-    font-size: 14px;
+    font-size: 1.2vw;
 }
 
 #bottomSection a {
-    font-size: 12px;
+    font-size: 1vw;
+    color: black;
+
 }
 
 .logoImageContainer {
@@ -210,6 +214,7 @@ a:active {
 }
 
 .logoImageContainer img {
+    position: relative;
     height: 5vh;
     width: 100%;   
     border-radius: 10px / 50% ; 
@@ -236,6 +241,8 @@ a:active {
 ::-webkit-scrollbar-thumb:hover {
     background: #69bbeb; 
 }
+
+
 
 #bottomSection a:link {
     text-decoration: underline;
