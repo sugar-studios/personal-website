@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <!--
+    Alexander Calkins
+    Personal Website
+    9/1/2023
+-->
+    <head>
+        <!--MetaData-->
+        <div>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="description" content="A perosnal Portfolio of a software Developer">
+            <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        </div>
+
+        <!--Page Title-->
+        <title>Email Form</title>
+
+        <!--Style Sheets-->
+        <div>
+            <link rel="stylesheet" href="stylesheets/mainStyles.css">
+            <link rel="stylesheet" href="stylesheets/mainStylesAnimations.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&display=swap" rel="stylesheet">
+        </div>
+
+        <!--JavaScript-->
+        <div>
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script src="javascript/FormLogic.js"> </script>
+            <script src="javascript/mainPageFunctions.js"></script>
+            <script>history.scrollRestoration = "manual"</script>
+            <script>
+                window.onbeforeunload = function () {
+                    window.scrollTo(0, 0);
+                };
+            </script>
+            <script src="javascript/"></script>
+        </div>
+        
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="images/MainPage/MainIcon.ico">
+    </head>
+
+    <body class="body" style="height: 300px;">
+
+        <!-- Top Banner-->
+        <header>
+            <div class="topBanner slide-in-from-top">
+                <!--My Name-->
+                <div class="topBannerIcon">
+                    <p>Alexander Calkins</p>
+                </div>
+
+                <!--Banner Links-->
+                <div class="topLinks">   
+                    <a href="https://www.linkedin.com/in/alexander-calkins-173b10273/" target="_self">
+                        <button class="topLinksButtons">
+                            <p>LinkedIn</p>
+                        </button> 
+                    </a>
+
+                    <a href="https://github.com/sugar-studios" target="_self">
+                        <button class="topLinksButtons">
+                            <p>GitHub</p>
+                        </button> 
+                    </a>
+
+                    <a href="https://www.google.com" target="_self">
+                        <button class="topLinksButtons">
+                            <p>Project</p>
+                        </button> 
+                    </a>
+                    
+                    <a href="#aboutSection" target="_self">
+                        <button class="topLinksButtons">
+                            <p>About</p>
+                        </button> 
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+        <!--Main Body of page-->
+        <div class="mainFormContainer">
+            <h1>Email Form</h1>
+            <form name="contactForm" >
+                <label for="clientEmail">Client Email:</label>
+                <input type="email" id="clientEmail" required><br>
+
+                <label for="content" class="FormContent">Content:</label><br>
+                <textarea id="content" rows="4" cols="50" required></textarea><br>
+
+                <input type="button" value="Send Email" onclick="sendEmail()">
+            </form>
+        </div>
+
+        <div id="bottomSection" class="card3">
+            <p>Alexander Calkins</p>
+            <a href="contact.html" target="_self">Contact Me</a>
+            <br>
+            <a href="https://github.com/sugar-studios" target="_self">Github</a>
+            <br>
+            <a href="https://www.linkedin.com/in/alexander-calkins-173b10273/" target="_self">LinkedIn</a>
+            <br>
+            <div class="logoImageContainer">
+               <img src="images/MainPage/SugarStudiosLogo.png" alt="logo"> 
+            </div>
+            
+        </div>
+
+        <canvas id="particle-canvas"></canvas>
+        <script src="javascript/mainPageBackgroundParticles.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Typer();
+                SlideAnimations();
+            });
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,10 @@
+.mainFormcontainer {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+}
+
+body{
+    font-family: IBM Plex Sans Condensed;
+}
