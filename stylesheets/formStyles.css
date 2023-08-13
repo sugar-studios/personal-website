@@ -1,8 +1,14 @@
-.mainFormcontainer {
+.mainFormContainer {
     display: flex;
-    align-self: center;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    margin-left: 25%;
+    background-color: aliceblue;
+    height: 50vh;
+    width: 50vw;
+    flex-direction: column;
+    padding: 0;
 }
 
 body{
