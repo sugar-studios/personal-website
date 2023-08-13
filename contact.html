@@ -89,12 +89,23 @@
         <div class="mainFormContainer">
             <h1>Email Form</h1>
             <form name="contactForm" >
-                <label for="clientEmail">Client Email:</label>
-                <input type="email" id="clientEmail" required><br>
-
-                <label for="content" class="FormContent">Content:</label><br>
-                <textarea id="content" rows="4" cols="50" required></textarea><br>
-
+                <div class="form">
+                    <div>
+                        <label for="clientEmail">Client Email:</label><br>
+                        <div class="inputField" id="emailInputField">
+                            <input type="email" id="clientEmail" required><br>
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <label for="content" class="FormContent">Content:</label><br>
+                        <div class="inputField">
+                            <textarea id="content" rows="4" cols="50" required></textarea><br>
+                        </div>
+                    </div>
+                
+                </div>
                 <input type="button" value="Send Email" onclick="sendEmail()">
             </form>
         </div>

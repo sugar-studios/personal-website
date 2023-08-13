@@ -280,7 +280,7 @@ html {
 }
 
 @media screen and (max-width: 480px) {
-    .midMainBodyBottomSections{ flex-direction: column};
+    .midMainBodyBottomSections{ flex-direction: column-reverse};
 }
 
 @media screen and (min-width: 480px) {

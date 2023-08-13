@@ -13,6 +13,11 @@ function sendEmail() {
         return
     }
 
+    if (content.length > 150) {
+        alert("content is too long.")
+        return
+    }
+
     if (!isValidEmail(clientEmail)) {
         alert("Please enter valid email addresses.");
         return;
