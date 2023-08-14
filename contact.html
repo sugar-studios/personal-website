@@ -45,7 +45,7 @@
         <link rel="icon" type="image/x-icon" href="images/MainPage/MainIcon.ico">
     </head>
 
-    <body class="body" style="height: 300px;">
+    <body class="body">
 
         <!-- Top Banner-->
         <header>
@@ -91,30 +91,69 @@
 
         <!--Main Body of page-->
         <div class="mainFormContainer">
-            <h1>Email Form</h1>
-            <form name="contactForm" >
-                <div class="form">
-                    <div>
-                        <label for="clientEmail">Client Email:</label><br>
-                        <div class="inputField" id="emailInputField">
-                            <input type="email" id="clientEmail" required><br>
-                        </div>
-                        
+            <div class="mainForm">
+                <div class="container">
+                    <div class="row">
+                        <h1 style="color: black;">contact me</h1>
                     </div>
-                    
-                    <div>
-                        <label for="content" class="FormContent">Content:</label><br>
-                        <div class="inputField">
-                            <textarea id="content" rows="4" cols="50" required></textarea><br>
+                    <div class="row input-container">
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <input type="text" required />
+                                <label>Name</label> 
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input inputField" id="emailInputField">
+                                <input type="email" id="clientEmail" required><br>
+                                <label>Email</label> 
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="styled-input wide inputField">
+                                <textarea id="content" required></textarea><br>
+                                <label>Message</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div>
+                                <input class="btn-lrg submit-btn" type="button" value="Send Email" onclick="sendEmail()">
+                            </div>
                         </div>
                     </div>
-                
                 </div>
-                <input type="button" value="Send Email" onclick="sendEmail()">
-            </form>
+            </div>
+                <!--
+                <div>
+                    <form name="contactForm" >
+                        <div class="form">
+                            <div>
+                                <label for="clientEmail">Client Email:</label><br>
+                                <div class="inputField" id="emailInputField">
+                                    <input type="email" id="clientEmail" required><br>
+                                </div>
+                                
+                            </div>
+                            
+                            <div>
+                                <label for="content" class="FormContent">Content:</label><br>
+                                <div class="inputField">
+                                    <textarea id="content" rows="4" cols="50" required></textarea><br>
+                                </div>
+                            </div>
+
+                            <div>
+                                <input type="button" value="Send Email" onclick="sendEmail()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                -->
+            </div>
+            
         </div>
 
-        <div id="bottomSection" style="opacity: 1; bottom:0; position: absolute; width: 100%">
+        <div id="bottomSection" style="opacity: 1; width: 100%">
             <p>Alexander Calkins</p>
             <a href="contact.html" target="_self">Contact Me</a>
             <br>
@@ -128,7 +167,11 @@
             
         </div>
 
+        <!--
+
         <canvas id="particle-canvas"></canvas>
         <script src="javascript/mainPageBackgroundParticles.js"></script>  
+
+        -->
     </body>
 </html>
