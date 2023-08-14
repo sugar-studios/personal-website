@@ -111,7 +111,7 @@ textarea:focus { outline: 0; }
 
 input:focus ~ span,
 textarea:focus ~ span {
-   0 width: 100%;
+    width: 100%;
     -webkit-transition: all 0.075s ease;
     transition: all 0.075s ease;
 }
