@@ -29,8 +29,6 @@
 
         <!--JavaScript-->
         <div>
-            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-            <script src="javascript/FormLogic.js"> </script>
             <script src="javascript/mainPageFunctions.js"></script>
             <script>history.scrollRestoration = "manual"</script>
             <script>
@@ -90,28 +88,8 @@
         </header>
 
         <!--Main Body of page-->
-        <div class="mainFormContainer">
-            <h1>Email Form</h1>
-            <form name="contactForm" >
-                <div class="form">
-                    <div>
-                        <label for="clientEmail">Client Email:</label><br>
-                        <div class="inputField" id="emailInputField">
-                            <input type="email" id="clientEmail" required><br>
-                        </div>
-                        
-                    </div>
-                    
-                    <div>
-                        <label for="content" class="FormContent">Content:</label><br>
-                        <div class="inputField">
-                            <textarea id="content" rows="4" cols="50" required></textarea><br>
-                        </div>
-                    </div>
-                
-                </div>
-                <input type="button" value="Send Email" onclick="sendEmail()">
-            </form>
+        <div class="">
+
         </div>
 
         <div id="bottomSection" style="opacity: 1; bottom:0; position: absolute; width: 100%">
@@ -129,6 +107,6 @@
         </div>
 
         <canvas id="particle-canvas"></canvas>
-        <script src="javascript/mainPageBackgroundParticles.js"></script>  
+        <script src="javascript/mainPageBackgroundParticles.js"></script>    
     </body>
 </html>
