@@ -11,11 +11,21 @@
     padding: 0;
 }
 
-/*
 .inputField {
-    width: 100px;
+    width: 100%;
+    padding: 12px 20px;
 }
-*/
+
+input[type=email], input[type=text] {
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+
+}
+
+
 
 .form {
     display: flex;
