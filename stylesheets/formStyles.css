@@ -4,15 +4,13 @@
     align-items: center;
     margin-top: 20vh;
     margin-left: 25%;
-    background-color: aliceblue;
-    height: 50vh;
+    height: 41vh;
     width: 50vw;
     flex-direction: column;
-    padding-top: 1%;
-    padding-bottom: 1%;
 }
 
 .inputField {
+    font-size: 1vw;
     background-color: rgb(44, 43, 43);
     color: white;
     width: 35vw;
@@ -23,22 +21,35 @@
 }
 
 input[type=email], input[type=text] {
-    height: 7vh;
+    height: min(7vw, 7vh);
     float: left;
     /*margin: 2% 0;*/
     box-sizing: border-box;
+    font-size: max(10px ,1vw);
+    transform: scale(1);
+    transition: all .5s ease-out;
 }
 
-textarea {
+input[type=email]:hover {
+    transform: scale(1.04);
+}
+
+#content {
+    height: min(14vw, 14vh);;
     box-sizing: border-box;
     resize: none;
+    font-size: max(10px, 1vw);
+    transform: scale(1);
+    transition: all .5s ease-out;
+}
+
+#content:hover {
+    transform: scale(1.03);
 }
 
 #clientEmailLabel {
     margin-left: 5%;
     height: 7vh;
-    transition: all;
-    transform: translate(0, 50px);
 }
 
 #contentLabel {
@@ -52,16 +63,69 @@ textarea {
     white-space: nowrap;
 }
 
+#submitButton {
+    background-color: rgb(97, 97, 212);
+    color: white;
+    border-style: none;
+    font-size: max(10px ,1vw);
+    padding: max(5px, 1.5%);
+    border-radius: 20px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all .5s ease-out;
+}
+
+#submitButton:hover {
+    transform: scale(1.125);
+}
+
 
 .form {
-    width: 75%;
-    padding: 1%;
+    margin: 0;
+    width: 70%;
+    height: fit-content;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: gray;
+    background-color: #93a9b9;
+    border-radius: 45px;
+}
+
+h1.formHeader {
+    font-size: max(14px ,2vw);
+    color: white;
+    -webkit-text-stroke: 0.001px rgb(190, 190, 190);
+}
+
+.formHeader {
+    font-size: max(10px ,1vw);
+}
+
+.styledInput {
+    position: absolute;
 }
 
 body{
     font-family: IBM Plex Sans Condensed;
+    color: white;
 }
+
+@media screen and (max-height: 650px){
+    #bottomSection {
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+@media screen and (min-height: 650px){
+    #bottomSection {
+        flex-direction: column;
+    }
+}
+
+/*
+@media screen and (max-wdith: ;){
+    
+}
+*/

@@ -92,30 +92,29 @@
         <!--Main Body of page-->
         <main class="mainFormContainer">
             <div class="form">
-                <h1>Email Form</h1>
+                <h1 class="formHeader">Email Form</h1>
                 <form name="contactForm" >
                     <div>
-                        <label for="clientEmail" id="clientEmailLabel">Client Email:</label><br>
+                        <label for="clientEmail" id="clientEmailLabel" class="formHeader">Client Email:</label>
                         <div id="emailInputField">
                             <input maxlength="320" class="inputField" type="email" id="clientEmail" required><br>
                         </div>
-                        
-                    </div>
+
                     
                     <div>
-                        <label for="content" id="contentLabel">Content:</label><br>
+                        <label for="content" id="contentLabel" class="formHeader">Content:</label><br>
                         <div>
                             <textarea maxlength="235" class="inputField" id="content" rows="4" cols="50" required></textarea><br>
                         </div>
                     </div>
                     
-                    <input type="button" value="Send Email" onclick="sendEmail()">
+                    <input type="button" value="Send Email" id="submitButton" onclick="sendEmail()">
                 </form>
             </div>
             
         </main>
 
-        <div id="bottomSection" style="opacity: 1; width: 100%">
+        <div id="bottomSection" style="opacity: 1; width: 100%; position: absolute; bottom: 0;" >
             <p>Alexander Calkins</p>
             <a href="contact.html" target="_self">Contact Me</a>
             <br>
