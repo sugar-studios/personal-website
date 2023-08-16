@@ -2,34 +2,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15vh;
+    margin-top: 20vh;
     margin-left: 25%;
     background-color: aliceblue;
     height: 50vh;
     width: 50vw;
     flex-direction: column;
-    padding: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .inputField {
-    width: 100%;
-    padding: 12px 20px;
+    background-color: rgb(44, 43, 43);
+    color: white;
+    width: 35vw;
+    padding: 2% 3%;
+    border-radius: 10px 10px 40px 10px;
+    border-style: none;
+    margin: 1%;
 }
 
 input[type=email], input[type=text] {
-    margin: 8px 0;
+    height: 7vh;
+    float: left;
+    /*margin: 2% 0;*/
     box-sizing: border-box;
 }
 
 textarea {
+    box-sizing: border-box;
+    resize: none;
+}
 
+#clientEmailLabel {
+    margin-left: 5%;
+    height: 7vh;
+    transition: all;
+    transform: translate(0, 50px);
+}
+
+#contentLabel {
+    margin-left: 5%;
+    height: 7vh;
+}
+
+#clientEmail {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 
-
 .form {
+    width: 75%;
+    padding: 1%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: gray;
 }
 
 body{

@@ -90,31 +90,32 @@
         </header>
 
         <!--Main Body of page-->
-        <div class="mainFormContainer">
-            <h1>Email Form</h1>
-            <form name="contactForm" >
-                <div class="form">
+        <main class="mainFormContainer">
+            <div class="form">
+                <h1>Email Form</h1>
+                <form name="contactForm" >
                     <div>
-                        <label for="clientEmail">Client Email:</label><br>
+                        <label for="clientEmail" id="clientEmailLabel">Client Email:</label><br>
                         <div id="emailInputField">
-                            <input class="inputField" type="email" id="clientEmail" required><br>
+                            <input maxlength="320" class="inputField" type="email" id="clientEmail" required><br>
                         </div>
                         
                     </div>
                     
                     <div>
-                        <label for="content" class="FormContent">Content:</label><br>
+                        <label for="content" id="contentLabel">Content:</label><br>
                         <div>
-                            <textarea  class="inputField" id="content" rows="4" cols="50" required></textarea><br>
+                            <textarea maxlength="235" class="inputField" id="content" rows="4" cols="50" required></textarea><br>
                         </div>
                     </div>
-                
-                </div>
-                <input type="button" value="Send Email" onclick="sendEmail()">
-            </form>
-        </div>
+                    
+                    <input type="button" value="Send Email" onclick="sendEmail()">
+                </form>
+            </div>
+            
+        </main>
 
-        <div id="bottomSection" style="opacity: 1; bottom:0; position: absolute; width: 100%">
+        <div id="bottomSection" style="opacity: 1; width: 100%">
             <p>Alexander Calkins</p>
             <a href="contact.html" target="_self">Contact Me</a>
             <br>
