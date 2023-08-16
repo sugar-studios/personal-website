@@ -102,8 +102,24 @@ h1.formHeader {
     font-size: max(10px ,1vw);
 }
 
-.styledInput {
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: white;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    color: white;
+    padding: 1.3rem 30px 1rem 30px;
     position: absolute;
+    top: 35px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
 }
 
 body{

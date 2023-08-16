@@ -95,16 +95,17 @@
                 <h1 class="formHeader">Email Form</h1>
                 <form name="contactForm" >
                     <div>
-                        <label for="clientEmail" id="clientEmailLabel" class="formHeader">Client Email:</label>
-                        <div id="emailInputField">
-                            <input maxlength="320" class="inputField" type="email" id="clientEmail" required><br>
+                        <div id="emailInputField"  style="position: relative;"> 
+                            <input maxlength="320" class="inputField" type="email" id="clientEmail" required>
+                            <label for="clientEmail" id="clientEmailLabel" class="formHeader styled-input">Client Email:</label>
                         </div>
+                    </div>
 
                     
                     <div>
-                        <label for="content" id="contentLabel" class="formHeader">Content:</label><br>
-                        <div>
-                            <textarea maxlength="235" class="inputField" id="content" rows="4" cols="50" required></textarea><br>
+                        <div style="position: relative;">
+                            <textarea maxlength="235" class="inputField styled-input" id="content" rows="4" cols="50" required></textarea>
+                            <label for="content" id="contentLabel" class="formHeader styled-input">Content:</label>
                         </div>
                     </div>
                     
