@@ -1,0 +1,12 @@
+@media screen and (max-height: 650px){
+    #bottomSection {
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+@media screen and (min-height: 650px){
+    #bottomSection {
+        flex-direction: column;
+    }
+}

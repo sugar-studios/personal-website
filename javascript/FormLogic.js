@@ -38,3 +38,7 @@ function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
+
+document.getElementById("clientEmailLabel").addEventListener("focus", ()=>{
+    document.getElementById("clientEmailLabel")
+})

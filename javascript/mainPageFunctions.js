@@ -12,7 +12,7 @@ function Typer() {
     let currentMessageIndex = 0;
     let isTyping = true;
     let i = 0;
-
+    
     function typeText() {
         if (isTyping && i < messages[currentMessageIndex].length) {
             typingAnimation.innerHTML += messages[currentMessageIndex].charAt(i);
