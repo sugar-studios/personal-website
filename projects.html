@@ -21,6 +21,7 @@
         <div>
             <link rel="stylesheet" href="stylesheets/mainStyles.css">
             <link rel="stylesheet" href="stylesheets/mainStylesAnimations.css">
+            <link rel="stylesheet" href="stylesheets/projectStylesAnimations.css">
             <link rel="stylesheet" href="stylesheets/projectStyles.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +35,7 @@
             <script>
                 window.onbeforeunload = function () {
                     window.scrollTo(0, 0);
-                };
+                };logo
             </script>
             <script src="javascript/"></script>
         </div>
@@ -88,32 +89,37 @@
         </header>
 
         <!--Main Body of page-->
-        
-        <nav class="projectSideBarNav">
-            <div class="projectSideBarNavContent">
-                hey
+        <main class="projectMain">
+            <nav class="projectSideBarNav slide-in">
+                <div class="projectSideBarNavContent">
+                    <h2>PYTHON</h2>
+                    <a href="" class="navContent">Enter Presser</a>
+                </div>
+                <div class="projectSideBarNavContent">
+                    <h2>Websites</h2>
+                    <a href="" class="navContent">Personal Website</a>
+                </div>
+                <div class="projectSideBarNavContent">
+                    <h2>C#/Unity</h2>
+                    <a href="" class="navContent">Project A</a>
+                </div>
+            </nav>
+
+            <div class="projectContainer">
+                <div class="mainProjectContent">
+                    dfsa
+                </div>
             </div>
-            <div class="projectSideBarNavContent">
-                hey
-            </div>
-            <div class="projectSideBarNavContent">
-                hey
-            </div>
-        </nav>
+        </main>
 
         <!--Bottom Section-->
-        <div id="bottomSection" style="opacity: 1; width: 100%; position: absolute; bottom: 0;" >
+        <div id="bottomSection" style="opacity: 1; margin: 0;" >
             <p>Alexander Calkins</p>
             <a href="contact.html" target="_self">Contact Me</a>
             <br>
             <a href="https://github.com/sugar-studios" target="_self">Github</a>
             <br>
-            <a href="https://www.linkedin.com/in/alexander-calkins-173b10273/" target="_self">LinkedIn</a>
-            <br>
-            <div class="logoImageContainer">
-               <img src="images/MainPage/SugarStudiosLogo.png" alt="logo"> 
-            </div>
-            
+            <a href="https://www.linkedin.com/in/alexander-calkins-173b10273/" target="_self">LinkedIn</a>           
         </div>
 
         <canvas id="particle-canvas"></canvas>

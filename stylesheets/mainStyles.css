@@ -201,7 +201,7 @@ a:active {
     bottom: 0;
     margin-top: 10vh;
     margin-bottom: 0;
-    height: fit-content;
+    height: 20vh;
     padding: 1%;
     background-color: #1B4965;
     font-family: IBM Plex Sans Condensed;
@@ -222,19 +222,6 @@ a:active {
     font-size: 10px;
     color: black;
 
-}
-
-.logoImageContainer {
-    opacity: .8;
-    height: 5vh;
-
-}
-
-.logoImageContainer img {
-    position: relative;
-    height: 5vh;
-    width: 100%;   
-    border-radius: 10px / 50% ; 
 }
 
 #aboutSection {
@@ -293,4 +280,19 @@ html {
 
 @media screen and (min-width: 480px) {
     .midMainBodyBottomSections{ flex-direction: row};
+}
+
+@media screen and (max-height: 650px){
+    #bottomSection {
+        height: 10vh;
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+@media screen and (min-height: 650px){
+    #bottomSection {
+        height: 20vh;
+        flex-direction: column;
+    }
 }
