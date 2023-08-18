@@ -3,23 +3,22 @@ function sendEmail() {
     const content = document.getElementById("content").value;
 
     if (!clientEmail || !content) {
-
-        alert("Please fill in all fields.");
+        notify("Please fill in all fields.");
         return;
     }
 
-    if (content.length < 10) {
-        alert("content is too short.")
+    if (content.length < 5) {
+        notify("content is too short.")
         return
     }
 
     if (content.length > 150) {
-        alert("content is too long.")
+        notify("content is too long.")
         return
     }
 
     if (!isValidEmail(clientEmail)) {
-        alert("Please enter valid email addresses.");
+        notify("Please enter valid email addresses.");
         return;
     }
 
@@ -28,9 +27,9 @@ function sendEmail() {
         to_name: "acalk",
         message: content,
     }, "IBc_4Jrihs4zJMHa7").then(function(response) {
-        alert("Email sent successfully!");
+        notify("Email sent successfully!");
     }, function(error) {
-        alert("Failed to send email. Please try again later.");
+        notify("Failed to send email. Please try again later.");
     });
 }
 
@@ -42,3 +41,10 @@ function isValidEmail(email) {
 document.getElementById("clientEmailLabel").addEventListener("focus", ()=>{
     document.getElementById("clientEmailLabel")
 })
+
+function notify(message) {
+    let x = document.getElementById("snackbar");
+    x.innerHTML = message;
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
