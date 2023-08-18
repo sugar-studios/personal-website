@@ -4,6 +4,7 @@ body {
 }
 
 .projectSideBarNav {
+    overflow-y: scroll;
     position: relative;
     width: 10%;
     margin-top: 10vh;
@@ -11,6 +12,7 @@ body {
     display: inline-flex;
     transition: all .5s ease;
     padding-left: 2%;
+    padding-right: 3%;
     justify-content: space-around;
     flex-direction: column;
     align-items: left;
@@ -29,7 +31,8 @@ body {
 }
 
 .projectSideBarNavContent {
-    overflow-y: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .projectSideBarNavContent h2{
@@ -114,7 +117,7 @@ body {
   
   .flip-card.active .flip-card-inner {
     transform: rotateY(0deg);
-    width: min(40vh, 60vw);
+    width: min(60vh, 90vw);
   }
   
   .flip-card-front,
@@ -127,6 +130,7 @@ body {
   }
   
   .flip-card-front {
+    padding-left: 2%;
     background-color: #2980b9;
     color: white;
   }
