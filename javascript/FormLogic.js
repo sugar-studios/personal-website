@@ -29,7 +29,13 @@ function sendEmail() {
     }, "IBc_4Jrihs4zJMHa7").then(function(response) {
         notify("Email sent successfully!");
     }, function(error) {
-        notify("Failed to send email. Please try again later.");
+        if (navigator.onLine === false)
+        {
+            notify("No internet conection");
+        } else {
+           notify("Failed to send email. Please try again later."); 
+        }
+        
     });
 }
 
