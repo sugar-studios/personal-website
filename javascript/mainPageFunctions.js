@@ -67,6 +67,8 @@ function SlideAnimations() {
                     entry.target.classList.add("slide-in-from-left");
                 } else if (entry.target.classList.contains("card")){
                     entry.target.classList.add("slide-in-from-right");
+                } else if (entry.target.classList.contains("card4")) {
+                    entry.target.classList.add("zoom-out");
                 } else {
                     entry.target.classList.add("slide-in-from-bottom");
                 }
@@ -78,7 +80,7 @@ function SlideAnimations() {
     const observer = new IntersectionObserver(startAnimation);
     const options = { root: null, rootMargin: '0px', threshold: 1 }; 
 
-    const elements = document.querySelectorAll('.card, .card2, .card3');
+    const elements = document.querySelectorAll('.card, .card2, .card3, .card4');
     elements.forEach(el => {
         observer.observe(el, options);
     });

@@ -19,6 +19,10 @@
   border: 0;
 }
 
+.card4 {
+  transform: scale(0);
+}
+
 .slide-in-from-right {
   /*
   animation: 1s ease-out 0s 1 slideInFromRight forwards;
@@ -33,6 +37,10 @@
 .slide-in-from-left {
   transition: transform 1s cubic-bezier(0.68, -0.55, 0.1, 1.2);
   transform: translate(0%, 0); 
+}
+
+.zoom-out {
+  transform: scale(1);
 }
 
 /*
