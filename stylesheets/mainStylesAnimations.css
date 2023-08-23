@@ -118,3 +118,22 @@
   opacity: 1;
 }
 }
+
+.interactiveText {
+  transform: scale(1);
+  text-shadow: 0px 0px rgba(0,0,0,0);
+  transition: all .5s ease-out;
+}
+.interactiveText:hover {
+  transform: scale(1.125);
+  text-shadow: -5px 5px rgba(0,0,0, .1);
+}
+.interactiveBox {
+  transform: scale(1);
+  box-shadow: 0px 0px rgba(0,0,0,0);
+  transition: all .5s ease-out;
+}
+.interactiveBox:hover {
+  transform: scale(1.01);
+  box-shadow: -3px 3px rgba(0,0,0, .1);
+}

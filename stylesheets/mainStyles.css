@@ -1,6 +1,6 @@
 .body {
     margin: 0;
-    background-color: #153142;
+    background-color: #dddddd;
     overflow-x: hidden;
 }
 
@@ -27,7 +27,7 @@ a:active {
     margin: 0;
     top: 0;
     width: 100%;
-    background-color: #1B4965;
+    background-color: #202020;
     display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr;
@@ -37,7 +37,7 @@ a:active {
 
 .topBanner p {
     color: white;
-    font-size: 2vw;
+    font-size: max(14px, 2vw);
     font-family: IBM Plex Sans Condensed;
 }
 
@@ -63,18 +63,18 @@ a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1B4965;
+    background-color: #202020;
     max-width: 10vw;
+    transition: background-color 1.5s ease-out;
     padding-left: min(15vh, 5vh);
     padding-right: min(15vh, 5vh);
     min-width: 1vw;
     height: 10vh;
     border: 0;
-    transition: background-color 0.5s ease-out;
 }
 
 .topLinksButtons:hover{
-    background-color: #20597c;
+    background-color: #4d4d4d;
     cursor: pointer;
 }
 .mainBody {
@@ -98,6 +98,15 @@ a:active {
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+#introText {
+    transform: scale(1);
+    text-shadow: -5px 5px rgba(0,0,0, .1);
+    transition: all .5s ease-out;
+  }
+#introText:hover {
+    transform: scale(1.125);
+    text-shadow: -10px 10px rgba(0,0,0, .1);
 }
 
 .mainBodyBottom {
@@ -143,7 +152,7 @@ img {
 }
 
 .MBS1a {
-    background-color: rgba(202, 233, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 100%;
     transition: transform .4s cubic-bezier(0, -0.55, 0.05, 1.6);
     display: flex;
@@ -153,25 +162,29 @@ img {
 }
 
 .MBS1b {
+    margin-left: 5%;
     border-radius: 20px;
-    background-color: #CAE9FF;
+    background-color: #ffffff;
     padding: 1%;
     padding-left: 20px;
     padding-right: 20px;
     width: 50%;
+    box-shadow: -5px 5px rgba(0,0,0, .1);
 }
 
 .MBS2a {
+    margin-right: 5%;
     border-radius: 20px;
-    background-color: #CAE9FF;
+    background-color: #ffffff;
     padding: 1%;
     padding-left: 20px;
     padding-right: 20px; 
     width: 50%;
+    box-shadow: -5px 5px rgba(0,0,0, .1);
 }
 
 .MBS2b {
-    background-color: rgba(202, 233, 255, 0.05);
+    background-color: rgba(155, 154, 154, 0.5);
     border-radius: 100%;
     transition: transform .4s cubic-bezier(0, -0.55, 0.05, 1.6);
     display: flex;
@@ -181,7 +194,7 @@ img {
 }
 
 .MBS3a {
-    background-color: rgba(202, 233, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 100%;
     transition: transform .4s cubic-bezier(0, -0.55, 0.05, 1.6);
     display: flex;
@@ -191,12 +204,14 @@ img {
 }
 
 .MBS3b {
+    margin-left: 3%;
     border-radius: 20px;
-    background-color: #CAE9FF;
+    background-color: #ffffff;
     padding: 1%;
     padding-left: 20px;
     padding-right: 20px;
     width: 50%;
+    box-shadow: -5px 5px rgba(0,0,0, .1);
 }
 
 .mainBodyBottomSections h4{
@@ -233,14 +248,14 @@ img {
     margin-bottom: 0;
     height: 20vh;
     padding: 1%;
-    background-color: #1B4965;
+    background-color: #202020;
     font-family: IBM Plex Sans Condensed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     color: white;
-    transition: all 1s ease;
+    transition: opacity 1s ease;
     opacity: 0;
 }
 
@@ -252,13 +267,12 @@ img {
 #bottomSection a {
     transition: all 1s ease;
     font-size: max(10px, .6vw);
-    color: black;
+    color: rgb(172, 172, 172);
 }
 
 #aboutSection {
     margin-bottom: 25vh;
 }
-
 #bottomSection a:link {
     text-decoration: underline;
 }
@@ -273,6 +287,26 @@ img {
 
 #bottomSection a:active {
     text-decoration: underline;
+}
+
+.scrollToTop {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 6vh;
+    background-color: #e6e6e6;
+    border-radius: 100%;
+}
+.scrollToTop button {
+    font-size: 2.5vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
 }
 
 canvas {

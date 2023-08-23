@@ -85,3 +85,29 @@ function SlideAnimations() {
         observer.observe(el, options);
     });
 }
+
+function ScrollCheck() {
+    const scrollButton = document.getElementById("scrollToTop");
+    scrollButton.style.opacity = 0;
+
+    const totalHeight = document.documentElement.scrollHeight;
+
+    window.addEventListener("scroll", function() {
+
+    const scrollPosition = window.scrollY;
+
+
+    const thirtyPercent = (totalHeight * 20) / 100;
+
+    if (scrollPosition >= thirtyPercent) {
+        scrollButton.style.opacity = 1;
+    } else {
+        scrollButton.style.opacity = 0;
+    }
+
+    });
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }

@@ -32,6 +32,7 @@ input[type=email], input[type=text] {
 
 input[type=email]:hover {
     transform: scale(1.04);
+    box-shadow: -5px 5px rgba(0,0,0, .1);
 }
 
 #content {
@@ -45,6 +46,7 @@ input[type=email]:hover {
 
 #content:hover {
     transform: scale(1.03);
+    box-shadow: -5px 5px rgba(0,0,0, .1);
 }
 
 #clientEmailLabel {
@@ -64,7 +66,7 @@ input[type=email]:hover {
 }
 
 #submitButton {
-    background-color: rgb(97, 97, 212);
+    background-color: rgb(65, 68, 71);
     color: white;
     border-style: none;
     font-size: max(10px ,1vw);
@@ -77,6 +79,7 @@ input[type=email]:hover {
 
 #submitButton:hover {
     transform: scale(1.125);
+    box-shadow: -5px 5px rgba(0,0,0, .1);
 }
 
 
@@ -88,14 +91,24 @@ input[type=email]:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #93a9b9;
+    background-color: #ffffff;
     border-radius: 45px;
 }
 
-h1.formHeader {
-    font-size: max(14px ,2vw);
+.formHeaderMain {
+    font-size: max(16px, 2.5vw);
     color: white;
-    -webkit-text-stroke: 0.001px rgb(190, 190, 190);
+    -webkit-text-stroke: 1px rgb(170, 170, 170);
+    transform: scale(1);
+    text-shadow: 0px 0px rgba(0,0,0,0);
+    transition: all .5s ease-out;
+}
+.formHeaderMain:hover {
+    transform: scale(1.125);
+    text-shadow: -5px 5px rgba(0,0,0, .1);
+}
+.label {
+    color: black;
 }
 
 .formHeader {
