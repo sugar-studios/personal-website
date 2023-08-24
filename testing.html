@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Top Border</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 200px; /* Set your desired width */
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px; /* Set the width of the top border */
+            height: 3px; /* Set the height of the top border */
+            background-color: #333; /* Set the color of the top border */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Content goes here
+    </div>
+</body>
+</html>

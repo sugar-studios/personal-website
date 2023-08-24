@@ -248,7 +248,8 @@ img {
     margin-bottom: 0;
     height: 20vh;
     padding: 1%;
-    background-color: #202020;
+    position: relative;
+    background-color: #cccccc;
     font-family: IBM Plex Sans Condensed;
     display: flex;
     flex-direction: column;
@@ -257,6 +258,18 @@ img {
     color: white;
     transition: opacity 1s ease;
     opacity: 0;
+}
+#bottomSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 20px;
+    opacity: .5;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1vh; 
+    background-color: #afafaf; 
 }
 
 #bottomSection p{
@@ -267,7 +280,7 @@ img {
 #bottomSection a {
     transition: all 1s ease;
     font-size: max(10px, .6vw);
-    color: rgb(172, 172, 172);
+    color: rgb(255, 255, 255);
 }
 
 #aboutSection {
