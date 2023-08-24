@@ -47,7 +47,7 @@
 
         <!-- Top Banner-->
         <header>
-            <div class="topBanner slide-in-from-top">
+            <div class="topBanner slide-in-from-top" style="height: 12.1vh;">
                 <!--My Name-->
                 <div class="topBannerIcon">
                     <a href="index.html" alt="Alexander Calkins">
@@ -88,20 +88,28 @@
         </header>
 
         <!--Main Body of page-->
-        <main class="projectMain">
-            <nav class="projectSideBarNav slide-in">
-                <div class="projectSideBarNavContent">
-                    <h2>Python</h2>
-                    <a href="#enterPresser" class="navContent">Enter Presser</a>
-                </div>
-                <div class="projectSideBarNavContent">
-                    <h2>Websites</h2>
-                    <a href="#profile" class="navContent">Personal Website</a>
-                </div>
-                <div class="projectSideBarNavContent">
-                    <h2>C#/Unity</h2>
-                    <a href="#projectA" class="navContent">Project A</a>
-                </div>
+        <div id="mySidenav" class="sidenav" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="projectSideBarNavContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+                <h2>Python</h2 onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+                <a href="#enterPresser" class="navContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">Enter Presser</a>
+            </div>
+            <div class="projectSideBarNavContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+                <h2 onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">Websites</h2>
+                <a href="#profile" class="navContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">Personal Website</a>
+            </div>
+            <div class="projectSideBarNavContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+                <h2 onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">C#/Unity</h2>
+                <a href="#projectA" class="navContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">Project A</a>
+            </div>
+        </div>
+          
+          <!-- Use any element to open the sidenav -->
+        <span onclick="openNav()">open</span>
+
+        <main class="projectMain" id="main">
+            <nav class="projectSideBarNav">
+                <span class="slide-in interactiveText" style="cursor:pointer;" onclick="openNav()"><p>&#9776; open</p></span>
             </nav>
 
             <div class="projectContainer">
@@ -189,15 +197,38 @@
         <!--<canvas id="particle-canvas"></canvas>
         <script src="javascript/mainPageBackgroundParticles.js"></script>-->
         <script>
-            // Get all elements with the class .flip-card
             const flipCards = document.querySelectorAll(".flip-card");
           
-            // Add click event listeners to each flip card
             flipCards.forEach(flipCard => {
               flipCard.addEventListener("click", function () {
                 this.classList.toggle("active");
               });
             });
+        </script>
+        <script>
+            let sideNavActive = false;
+            let mouse = false;
+            function mouseStatus(n) {
+                mouse = n;
+            }
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "15%";
+                document.getElementById("main").style.marginLeft = "15%";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                setTimeout(() => { sideNavActive = true; }, 250);
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.body.style.backgroundColor = "#dddddd";
+                sideNavActive = false;
+            }
+            document.addEventListener("click", ()=> {
+                if (sideNavActive === true && mouse === false) {
+                    closeNav();
+                }
+            })
         </script>
           
           

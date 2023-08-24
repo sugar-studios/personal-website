@@ -24,14 +24,8 @@
 }
 
 .slide-in-from-right {
-  /*
-  animation: 1s ease-out 0s 1 slideInFromRight forwards;
-  */
-  /*transition: all 1s ease-out;*/
-
   transition: transform 1s cubic-bezier(0.68, -0.55, 0.1, 1.2);
   transform: translate(0%, 0); 
-
 }
 
 .slide-in-from-left {
@@ -42,59 +36,13 @@
 .zoom-out {
   transform: scale(1);
 }
-
-/*
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0.0;
-    transform: translateX(-50%);
-  }
-
-  9% {
-    opacity: 0.0;
-    transform: translateX(-50%);
-  }
-
-  10% {
-    opacity: 0.5;
-    transform: translateX(-50%);
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0.0;
-    transform: translateX(50%);
-  }
-
-  9% {
-    opacity: 0.0;
-    transform: translateX(50%);
-  }
-
-  10% {
-    opacity: 0.5;
-    transform: translateX(50%);
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-*/
 .slide-in-from-top {
     animation: 1s ease-out 0s 1 slideInFromTop forwards;
 }
   
 @keyframes slideInFromTop {
   0% {
-    opacity: 0.0;
+    opacity: 0.5;
     transform: translateY(-50%);
   }
 
@@ -137,3 +85,34 @@
   transform: scale(1.01);
   box-shadow: -3px 3px rgba(0,0,0, .1);
 }
+.interactiveBoxImg:hover {
+  transform: scale(1.01);
+  box-shadow: -3px 3px rgba(0,0,0, .1);
+}
+.pulseButton {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .1);
+  border: none;
+  border-radius: 100%;
+}
+.pulseGeneral {
+  animation: pulseMedium 1s;
+}
+.pulseButton:hover {
+  animation: pulseSmall 1.5s;
+}
+
+@keyframes pulseSmall {
+  0% {
+    transform: scale(.85);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2vh rgba(0, 0, 0, 0);
+  }
+    100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
