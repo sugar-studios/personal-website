@@ -11,7 +11,6 @@ body {
 .container {
   text-align: center;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,49 +32,53 @@ body {
 
 .blank2 {
     width: 100%;
-    min-height: 20vh;
+    min-height: 10vh;
     background-color: var(--color);
 }
 
 .first {
     background-color: var(--color);
     background-image: none !important;
+    min-height: 100vh;
 }
 
 .second {
-  background-image:url(https://images.unsplash.com/photo-1514496959998-c01c40915c5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-image:url(/images/About-Mono.png);
   background-attachment: fixed;
   height: 40vh;
+  min-height: 100vh;
 }
 
 .third {
     background-image: url(/images/Code-mono.png);
     background-attachment: fixed;
     height: 40vh;
+    min-height: 100vh;
 }
 
 .forth {
-    background-image:url(https://images.unsplash.com/photo-1514496959998-c01c40915c5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+    background-image:url(/images/Why-Mono.png);
     background-attachment: fixed;
     height: 40vh;
+    min-height: 100vh;
 }
 
 .second-img {
-  background-image:url(https://images.unsplash.com/photo-1514496959998-c01c40915c5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-image:url(/images/About-Color.jpg);
   background-attachment: fixed;
-  height: 40vh;
+  height: 15vh !important;
 }
 
 .third-img {
     background-image:url(/images/Code-Color.png);
     background-attachment: fixed;
-    height: 40vh;
+    height: 15vh !important;
 }
 
 .forth-img {
-    background-image:url(https://images.unsplash.com/photo-1514496959998-c01c40915c5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+    background-image:url(/images/Why-Color.jpg);
     background-attachment: fixed;
-    height: 40vh;
+    height: 15vh !important;
 }
 
 .card > a {

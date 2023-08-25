@@ -89,7 +89,7 @@
 
         <!--Main Body of page-->
         <div id="mySidenav" class="sidenav" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="margin-top: 2vh;">&times;</a>
             <div class="projectSideBarNavContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
                 <h2>Python</h2 onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
                 <a href="#enterPresser" class="navContent" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">Enter Presser</a>
@@ -112,13 +112,13 @@
                 <span class="slide-in interactiveText" style="cursor:pointer;" onclick="openNav()"><p>&#9776; open</p></span>
             </nav>
 
-            <div class="projectContainer">
+            <div class="projectContainer" id="projectContainer">
                 <div class="mainProjectContent">
                     <article name="python" class="mainProjectContentItems">
                         <h3>Python</h3>
                         <div id="enterPresser"></div>
                         <h4>Enter Presser</h4>
-                        <div class="flip-card">
+                        <div class="flip-card" id="p-EnterPresser">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                 <h1>Enter Presser</h1>
@@ -140,7 +140,7 @@
                         <h3>Websites</h3>
                         <div id="profile"></div>
                         <h4>Portfolio Website</h4>
-                        <div class="flip-card">
+                        <div class="flip-card" id="p-PortfolioWebsite">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                 <h1>Portfolio Website</h1>
@@ -162,7 +162,7 @@
                         <h3>C#/Unity</h3>
                         <div id="projectA"></div>
                         <h4>Project A</h4>
-                        <div class="flip-card">
+                        <div class="flip-card" id="p-ProjectA">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                 <h1>Project A</h1>

@@ -1,0 +1,7 @@
+{
+"projects": [
+    {"id": "p-EnterPresser", "image": "images/enterPresser.png"},
+    {"id": "p-PortfolioWebsite", "image": "images/profile.png"},
+    {"id": "p-ProjectA", "image": "images/project A.png"}
+]
+}

@@ -92,8 +92,8 @@ body {
 
 .flip-card {
     background-color: transparent;
-    width: 25vh;
-    height: 25vh;
+    width: 30vh;
+    height: 30vh;
     perspective: 1000px;
   }
   
@@ -111,7 +111,7 @@ body {
 .flip-card.active .flip-card-inner {
     transform: rotateY(0deg);
     width: 80vh;
-    height: 25vh;
+    height: 30vh;
 }
 @media only screen and (min-width: 1px) {
     .flip-card.active .flip-card-inner {
