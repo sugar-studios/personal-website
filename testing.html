@@ -3,65 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Scrolling</title>
+    <title>Parallax Scroll with Background Colors</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        .content {
-            height: 2000px; /* Height of your content */
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
         }
 
-        /* Customize the appearance of the scroll bar */
-        ::-webkit-scrollbar {
-            width: 10px;
+        /* Define background colors for your sections */
+        .section:nth-child(odd) {
+            background-color: #3498db; /* Blue */
         }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #888;
-            border-radius: 5px;
+        .section:nth-child(even) {
+            background-color: #e74c3c; /* Red */
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <!-- Your website content goes here -->
-        <h1>Welcome to My Website</h1>
-        <!-- Add more content as needed -->
+    <div class="section" data-speed="4">
+        Section 1
+    </div>
+    <div class="section" data-speed="6">
+        Section 2
+    </div>
+    <div class="section" data-speed="8">
+        Section 3
     </div>
 
     <script>
-        // Smooth scrolling function
-        function smoothScroll(target, duration) {
-            const targetElement = document.querySelector(target);
-            const targetPosition = targetElement.getBoundingClientRect().top;
-            const startPosition = window.pageYOffset;
-            const startTime = performance.now();
+        window.addEventListener("scroll", function () {
+            let scrollValue = window.scrollY;
 
-            function ease(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
+            // Get all sections
+            let sections = document.querySelectorAll(".section");
 
-            function animation(currentTime) {
-                const timeElapsed = currentTime - startTime;
-                const run = ease(timeElapsed, startPosition, targetPosition, duration);
-                window.scrollTo(0, run);
-                if (timeElapsed < duration) requestAnimationFrame(animation);
-            }
-
-            requestAnimationFrame(animation);
-        }
-
-        // Scroll to a specific section when a link is clicked
-        document.querySelector('a[href="#section2"]').addEventListener('click', function (e) {
-            e.preventDefault();
-            smoothScroll('#section2', 1000); // Adjust the duration as needed
+            sections.forEach(function (section) {
+                let speed = parseInt(section.getAttribute("data-speed"));
+                section.style.transform = `translateY(${scrollValue / speed}px)`;
+            });
         });
     </script>
 </body>

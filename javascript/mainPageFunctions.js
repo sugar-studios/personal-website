@@ -111,14 +111,3 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-function parallax() {
-    let s = document.getElementsByClassName("floater");
-    console.log(s);
-    console.log(s[0]);
-    let yPos = 0 - window.scrollY/4;
-    for (let i = 0; i < s.length; i++) {
-        const ele = s[i];
-        s[ele].style.top = 50 + yPos + "%";    
-    }
-}
