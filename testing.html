@@ -3,39 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Top Border</title>
+    <title>Smooth Scrolling</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
         }
 
-        .container {
-            position: relative;
-            width: 200px; /* Set your desired width */
-            padding: 20px;
-            background-color: #f0f0f0;
-            text-align: center;
+        .content {
+            height: 2000px; /* Height of your content */
         }
 
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px; /* Set the width of the top border */
-            height: 3px; /* Set the height of the top border */
-            background-color: #333; /* Set the color of the top border */
+        /* Customize the appearance of the scroll bar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        Content goes here
+    <div class="content">
+        <!-- Your website content goes here -->
+        <h1>Welcome to My Website</h1>
+        <!-- Add more content as needed -->
     </div>
+
+    <script>
+        // Smooth scrolling function
+        function smoothScroll(target, duration) {
+            const targetElement = document.querySelector(target);
+            const targetPosition = targetElement.getBoundingClientRect().top;
+            const startPosition = window.pageYOffset;
+            const startTime = performance.now();
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            function animation(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, targetPosition, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // Scroll to a specific section when a link is clicked
+        document.querySelector('a[href="#section2"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            smoothScroll('#section2', 1000); // Adjust the duration as needed
+        });
+    </script>
 </body>
 </html>

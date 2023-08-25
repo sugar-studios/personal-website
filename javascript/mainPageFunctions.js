@@ -97,7 +97,7 @@ function ScrollCheck() {
     const scrollPosition = window.scrollY;
 
 
-    const thirtyPercent = (totalHeight * 20) / 100;
+    const thirtyPercent = (totalHeight * 10) / 100;
 
     if (scrollPosition >= thirtyPercent) {
         scrollButton.style.opacity = 1;
