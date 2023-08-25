@@ -243,21 +243,23 @@ img {
 }
 
 #bottomSection {
+    width: 50%;
+    margin-left: 25%;
     bottom: 0;
-    margin-top: 10vh;
     margin-bottom: 0;
-    height: 20vh;
-    padding: 1%;
+    height: 10vh;
     position: relative;
     background-color: #cccccc;
     font-family: IBM Plex Sans Condensed;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     color: white;
     transition: opacity 1s ease;
     opacity: 0;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 50px;
 }
 #bottomSection::before {
     content: "";
@@ -272,12 +274,23 @@ img {
     background-color: #afafaf; 
 }
 
+#bottomSection h1{
+    margin-left: 2%;
+    margin-right: 2%;
+    transition: all 1s ease;
+    font-size: max(14px, 1.2vw);
+}
+
 #bottomSection p{
+    margin-left: .25%;
+    margin-right: .25%;
     transition: all 1s ease;
     font-size: max(14px, 1.2vw);
 }
 
 #bottomSection a {
+    margin-left: 2%;
+    margin-right: 2%;
     transition: all 1s ease;
     font-size: max(10px, .6vw);
     color: rgb(255, 255, 255);
@@ -361,19 +374,4 @@ html {
 
 @media screen and (min-width: 480px) {
     .midMainBodyBottomSections{ flex-direction: row};
-}
-
-@media screen and (max-height: 650px){
-    #bottomSection {
-        height: 10vh;
-        margin-top: 0;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-@media screen and (min-height: 650px){
-    #bottomSection {
-        height: 20vh;
-        flex-direction: column;
-    }
 }
