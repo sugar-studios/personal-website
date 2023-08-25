@@ -113,7 +113,7 @@
             </div>
         </div>
           
-        <div class="blank second-img" style="background-image: url(images/About-Color.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+        <div class="blank second-img floater" style="background-image: url(images/About-Color.jpg); background-repeat: no-repeat; background-size: cover;"></div>
           
         <div class="container second" style="background-image: url(images/About-Mono.png);">
             <div id="aboutSection" name="aboutSection"></div>
@@ -181,7 +181,7 @@
             <p>|</p>
             <a href="https://www.linkedin.com/in/alexander-calkins-173b10273/" target="_self" class="interactiveText">LinkedIn</a>
         </div>
-        <div class="scrollToTop pulseButton" id="scrollToTop">
+        <div class="scrollToTop pulseButton bounce" id="scrollToTop">
             <button onclick="topFunction()">&uarr;</button>
         </div>
 
@@ -192,6 +192,11 @@
                 Typer();
                 SlideAnimations();
                 ScrollCheck();
+            });
+        </script>
+        <script>
+            window.addEventListener("scroll", function(){
+                parallax();	
             });
         </script>
     

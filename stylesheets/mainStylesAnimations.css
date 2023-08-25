@@ -97,6 +97,9 @@
 .pulseGeneral {
   animation: pulseMedium 1s;
 }
+.bounce {
+  animation: 1s ease 0s infinite bounce;  
+}
 .pulseButton:hover {
   animation: pulseSmall 1.5s;
 }
@@ -104,14 +107,30 @@
 @keyframes pulseSmall {
   0% {
     transform: scale(.85);
+    box-shadow: 0 0 0 2vh rgba(255, 255, 255, .2);
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 2vh rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 2vh rgba(255, 255, 255, 0);
   }
     100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  0% {
+    transform: translateY(0%);
   }
 }
 
