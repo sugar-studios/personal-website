@@ -25,6 +25,7 @@ body {
 }
 
 .projectSideBarNavContent h2{
+    color: white;
     font-size: max(14px, 2vw);
 }
 
@@ -48,24 +49,33 @@ body {
 
 .projectContainer {
     margin-top: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height:80vh;
     overflow-y: hidden;
+    overflow-x: hidden;
     background-color: none;
 }
 
 .mainProjectContent {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-left: 5%;
+    /*justify-content: space-between;*/
     height: 100%;
     width: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+.mainProjectContentItems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    z-index: 2;
 }
 
 .mainProjectContent h3 {
@@ -155,7 +165,7 @@ body {
 
 .flip-card-front {
     padding-left: 2%;
-    background-color: rgb(110, 110, 110);
+    background-color: rgb(170, 170, 170);
     color: white;
 }
 
@@ -250,9 +260,8 @@ html {
     transition: margin-left .5s;
     padding: 20px;
   }
-/*
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  */
+
+
+#c#Content{ 
+    margin-bottom: 10%;
+}
