@@ -35,7 +35,7 @@ body {
 .first {
     background-color: var(--color);
     background-image: none !important;
-    min-height: 80vh;
+    min-height: 90vh;
 }
 
 .second {

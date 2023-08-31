@@ -4,16 +4,18 @@ function Typer() {
         "¿que tal?",
         ":)"
     ];
-    const animationSpeed = 50;
-    const pauseDuration = 7500; 
+    const animationSpeed = 40;
+    const pauseDuration = 2500; 
 
     const typingAnimation = document.getElementById("introText");
 
     let currentMessageIndex = 0;
     let isTyping = true;
     let i = 0;
+    let message = null;
     
     function typeText() {
+        if (message === null) {
         if (isTyping && i < messages[currentMessageIndex].length) {
             typingAnimation.innerHTML += messages[currentMessageIndex].charAt(i);
             i++;
@@ -21,7 +23,19 @@ function Typer() {
         } else if (isTyping) {
             isTyping = false;
             setTimeout(untypeText, pauseDuration);
+        }            
+        } else {
+            if (isTyping && i < message.length) {
+                typingAnimation.innerHTML += message.charAt(i);
+                i++;
+                setTimeout(typeText(), animationSpeed);
+            } else if (isTyping) {
+                isTyping = false;
+                setTimeout(untypeText, pauseDuration);
+                message = null;
+            }
         }
+
     }
 
     function untypeText() {
