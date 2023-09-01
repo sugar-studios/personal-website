@@ -3,54 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Scroll with Background Colors</title>
+    <title>Mouse Cursor Effect</title>
     <style>
+        html {
+            height: 100%; /* required for stable body height */
+        }
+
         body {
-            margin: 0;
-            padding: 0;
+            min-height: 100%; /* required for 'mix-blend-mode' */
+            color: #000;
+            background-color: #fff; /* required for 'mix-blend-mode' */
         }
 
-        .section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-        }
-
-        /* Define background colors for your sections */
-        .section:nth-child(odd) {
-            background-color: #3498db; /* Blue */
-        }
-
-        .section:nth-child(even) {
-            background-color: #e74c3c; /* Red */
+        .cursor {
+            position: absolute;
+            pointer-events: none;
+            width: 25px;
+            height: 25px;
+            background: #fff;
+            border-radius: 50%;
+            top: var(--y, 0);
+            left: var(--x, 0);
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            mix-blend-mode: difference;
         }
     </style>
 </head>
 <body>
-    <div class="section" data-speed="4">
-        Section 1
-    </div>
-    <div class="section" data-speed="6">
-        Section 2
-    </div>
-    <div class="section" data-speed="8">
-        Section 3
-    </div>
-
+    <h1>WORK</h1>
+    <span class="cursor"></span>
     <script>
-        window.addEventListener("scroll", function () {
-            let scrollValue = window.scrollY;
-
-            // Get all sections
-            let sections = document.querySelectorAll(".section");
-
-            sections.forEach(function (section) {
-                let speed = parseInt(section.getAttribute("data-speed"));
-                section.style.transform = `translateY(${scrollValue / speed}px)`;
-            });
-        });
+        document.body.onmousemove = function(e) {
+        document.documentElement.style.setProperty('--x', (e.clientX+window.scrollX) + 'px');
+        document.documentElement.style.setProperty('--y', (e.clientY+window.scrollY) + 'px');
+        }
     </script>
 </body>
 </html>

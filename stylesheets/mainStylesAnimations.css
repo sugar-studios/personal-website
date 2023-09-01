@@ -1,46 +1,57 @@
 #introTextContainer {
+  /* Prevent text from wrapping and hide overflow */
   white-space: nowrap;
   overflow: hidden;
   width: 100vh;
-  z-index: -1;  
+  z-index: -1;
 }
 
 #introText {
+  /* Set font size based on viewport size */
   font-size: max(7vh, 7vw);
   font-family: Tahoma, sans-serif;
   cursor: default;
 }
 
 .card {
+  /* Remove borders */
   border: 0;
 }
 
 .card2 {
+  /* Remove borders */
   border: 0;
 }
 
 .card4 {
+  /* Scale the element to 0, making it invisible */
   transform: scale(0);
 }
 
 .slide-in-from-right {
+  /* Slide in from the right with a smooth transition */
   transition: transform 1s cubic-bezier(0.68, -0.55, 0.1, 1.2);
   transform: translate(0%, 0); 
 }
 
 .slide-in-from-left {
+  /* Slide in from the left with a smooth transition */
   transition: transform 1s cubic-bezier(0.68, -0.55, 0.1, 1.2);
   transform: translate(0%, 0); 
 }
 
 .zoom-out {
+  /* Reset the scale to 1 */
   transform: scale(1);
 }
+
 .slide-in-from-top {
-    animation: 1s ease-out 0s 1 slideInFromTop forwards;
+  /* Slide in from the top with animation */
+  animation: 1s ease-out 0s 1 slideInFromTop forwards;
 }
-  
+
 @keyframes slideInFromTop {
+  /* Keyframes for sliding in from the top */
   0% {
     opacity: 0.5;
     transform: translateY(-50%);
@@ -53,58 +64,78 @@
 }
 
 .slide-in-from-bottom {
+  /* Slide in from the bottom with animation */
   animation: 1s 0s 1 slideInFromBottom forwards;
   opacity: 1;
 }
 
 @keyframes slideInFromBottom {
-0% {
-  opacity: 0.0;
-}
+  /* Keyframes for sliding in from the bottom */
+  0% {
+    opacity: 0.0;
+  }
 
-100% {
-  opacity: 1;
-}
+  100% {
+    opacity: 1;
+  }
 }
 
 .interactiveText {
+  /* Add interactive text style with a scale and text shadow transition */
   transform: scale(1);
   text-shadow: 0px 0px rgba(0,0,0,0);
   transition: all .5s ease-out;
 }
+
 .interactiveText:hover {
+  /* Increase scale and add text shadow on hover */
   transform: scale(1.125);
   text-shadow: -5px 5px rgba(0,0,0, .1);
 }
+
 .interactiveBox {
+  /* Add interactive box style with a scale and box shadow transition */
   transform: scale(1);
   box-shadow: 0px 0px rgba(0,0,0,0);
   transition: all .5s ease-out;
 }
+
 .interactiveBox:hover {
+  /* Increase scale and add box shadow on hover */
   transform: scale(1.01);
   box-shadow: -3px 3px rgba(0,0,0, .1);
 }
+
 .interactiveBoxImg:hover {
+  /* Increase scale and add box shadow on hover for images */
   transform: scale(1.01);
   box-shadow: -3px 3px rgba(0,0,0, .1);
 }
+
 .pulseButton {
+  /* Style for pulse button */
   box-shadow: 0 0 0 0 rgba(0, 0, 0, .1);
   border: none;
   border-radius: 100%;
 }
+
 .pulseGeneral {
+  /* Animation for general pulsing effect */
   animation: pulseMedium 1s;
 }
+
 .bounce {
+  /* Animation for bouncing effect */
   animation: 1s ease 0s infinite bounce;  
 }
+
 .pulseButton:hover {
+  /* Animation for pulsing effect on hover */
   animation: pulseSmall 1.5s;
 }
 
 @keyframes pulseSmall {
+  /* Keyframes for small pulsing effect */
   0% {
     transform: scale(.85);
     box-shadow: 0 0 0 2vh rgba(255, 255, 255, .2);
@@ -113,13 +144,14 @@
     transform: scale(1);
     box-shadow: 0 0 0 2vh rgba(255, 255, 255, 0);
   }
-    100% {
+  100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
 @keyframes bounce {
+  /* Keyframes for bouncing effect */
   0% {
     transform: translateY(0%);
   }
@@ -134,13 +166,5 @@
   }
 }
 
-
-
-
-
-
-
-
-
+/* Import a Google Font called 'Sen' */
 @import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
-

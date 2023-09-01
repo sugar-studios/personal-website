@@ -46,7 +46,7 @@
         <link rel="icon" type="image/x-icon" href="images/MainPage/MainIcon.ico">
     </head>
 
-    <body class="body" style="height: 300px;">
+    <body class="body" id="Fbody">
 
         <!-- Top Banner-->
         <header>
@@ -115,10 +115,10 @@
                     </div>
 
                 </form>
-            </div>
-            
+            </div>  
         </main>
 
+        <!--Bottom Links-->
         <div id="bottomSection" style="opacity: 1; margin: 0; margin-left: 20vw; height: 5vh; margin-top: 0; flex-direction: row; justify-content: space-around; position: absolute; width: 50vw; padding-left: 5%; padding-right: 5%;">
             <h1 class="interactiveText">Alexander Calkins</h1>
             <p>|</p>
@@ -128,10 +128,14 @@
             <p>|</p>
             <a href="https://www.linkedin.com/in/alexander-calkins-173b10273/" target="_self" class="interactiveText">LinkedIn</a>
         </div>
-
+        <span class="cursor"></span>
         <div id="snackbar">Some text some message..</div>
 
-        <!--<canvas id="particle-canvas"></canvas>
-        <script src="javascript/mainPageBackgroundParticles.js"></script>-->
+        <script>
+            document.body.onmousemove = function(e) {
+            document.documentElement.style.setProperty('--x', (e.clientX+window.scrollX) + 'px');
+            document.documentElement.style.setProperty('--y', (e.clientY+window.scrollY) + 'px');
+            }
+        </script>    
     </body>
 </html>

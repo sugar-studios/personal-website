@@ -1,4 +1,5 @@
 let userScroll = false;
+const x = document.getElementById("snackbar");
 
 console.log("hey");
 
@@ -13,8 +14,15 @@ document.addEventListener("scroll", ()=>{
 })
 
 function notify(message) {
-    let x = document.getElementById("snackbar");
     x.innerHTML = message;
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    checkFlag();
+}
+
+function checkFlag() {
+    if(userScroll === false) {
+       window.setTimeout(checkFlag, 100);
+    } else {
+        x.className = x.className.replace("show", "");
+    }
 }

@@ -116,6 +116,9 @@
             <div class="projectContainer" id="projectContainer">
                 <div class="mainProjectContent">
                     <div class="projectContainerBackground"></div>    
+
+                        <!-- Python -->
+
                         <article name="python" class="mainProjectContentItems">
                             <h3>Python</h3>
                             <div id="enterPresser"></div>
@@ -138,6 +141,9 @@
                                 </div>                          
                         </article>
                         <div class="mainProjectContentItemDivider"></div>
+                        
+                        <!-- Websites -->
+
                         <article name="web" class="mainProjectContentItems">
                             <h3>Websites</h3>
                             <div id="profile"></div>
@@ -160,6 +166,9 @@
                                 </div>   
                         </article>
                         <div class="mainProjectContentItemDivider"></div>
+                        
+                        <!-- C# -->
+
                         <article name="C#/Unity" class="mainProjectContentItems" id="c#Content">
                             <h3>C#/Unity</h3>
                             <div id="projectA"></div>
@@ -185,9 +194,9 @@
                 </div> 
             </div>
         </main>
+        <span class="cursor"></span>
 
-        <!--<canvas id="particle-canvas"></canvas>
-        <script src="javascript/mainPageBackgroundParticles.js"></script>-->
+        <!--Card flip scripts-->
         <script>
             const flipCards = document.querySelectorAll(".flip-card");
           
@@ -222,6 +231,12 @@
                 }
             })
         </script>
+        <script>
+            document.body.onmousemove = function(e) {
+            document.documentElement.style.setProperty('--x', (e.clientX+window.scrollX) + 'px');
+            document.documentElement.style.setProperty('--y', (e.clientY+window.scrollY) + 'px');
+            }
+        </script>    
           
           
     </body>

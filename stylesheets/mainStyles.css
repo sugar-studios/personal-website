@@ -1,3 +1,4 @@
+/* Overall styling for the body of the website */
 .body {
     margin: 0;
     background-color: #dddddd;
@@ -6,22 +7,51 @@
     scroll-padding-bottom: 1%;
 }
 
+/* Styling for the HTML element */
+html {
+    height: 100%; /* required for stable body height */
+}
+
+/* Additional styling for the body element */
+body {
+    min-height: 100%; /* required for 'mix-blend-mode' */
+    color: #000;
+    background-color: #fff; /* required for 'mix-blend-mode' */
+}
+
+/* Styling for the cursor element */
+.cursor {
+    position: absolute;
+    pointer-events: none;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+/* Styling for links */
 a:link {
     text-decoration: none;
-  }
+}
 
 a:visited {
     text-decoration: none;
-  }
+}
 
 a:hover {
     text-decoration: none;
-  }
+}
 
 a:active {
     text-decoration: none;
-  }
+}
 
+/* Styling for the top banner section */
 .topBanner {
     font-family: IBM Plex Sans Condensed;
     position: fixed;
@@ -43,14 +73,16 @@ a:active {
     font-family: IBM Plex Sans Condensed;
 }
 
+/* Styling for the top banner links */
 .topLinks {
-    left:0;
+    left: 0;
     display: inline-flex;
     flex-flow: row-reverse;
     align-content: flex-end;
     align-items: center;
 }
 
+/* Styling for the top banner icon */
 .topBannerIcon {
     margin-left: min(5vh, 1vh);
     display: inline-flex;
@@ -59,6 +91,8 @@ a:active {
     color: white;
     cursor: default;
 }
+
+/* Styling for the top banner buttons */
 .topLinksButtons {
     position: relative;
     display: flex;
@@ -74,24 +108,24 @@ a:active {
     border: 0;
 }
 
-.topLinksButtons:hover{
+.topLinksButtons:hover {
     background-color: #4d4d4d;
     cursor: pointer;
 }
 
-
-
+/* Styling for the main body of the page */
 .mainBody {
     display: grid;
 }
 
+/* Styling for the top section of the main body */
 .mainBodyTop {
     margin-top: 4.5%;
     display: grid;
     grid-template-columns: 1fr;
 }
 
-
+/* Styling for the text in the top section of the main body */
 .mainBodyTopText {
     font-family: IBM Plex Sans Condensed;
     color: white;
@@ -101,41 +135,54 @@ a:active {
     text-align: center;
     align-items: center;
 }
+
+/* Styling for the introductory text */
 #introText {
     transform: scale(1);
-    text-shadow: -5px 5px rgba(0,0,0, .1);
+    text-shadow: -5px 5px rgba(0, 0, 0, .1);
     transition: all .5s ease-out;
-  }
-#introText:hover {
-    transform: scale(1.125);
-    text-shadow: -10px 10px rgba(0,0,0, .1);
 }
 
+/* Styling for the introductory text on hover */
+#introText:hover {
+    transform: scale(1.125);
+    text-shadow: -10px 10px rgba(0, 0, 0, .1);
+}
+
+/* Styling for the bottom section of the main body */
 .mainBodyBottom {
+    margin-top: 5vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-content:center;
-    justify-content:center;
+    align-content: center;
+    justify-content: center;
     text-align: left;
     align-items: center;
 }
 
+/* Styling for the floater element */
 .floater {
     z-index: 1000;
 }
+
+/* Styling for the float-center element */
 .float-center { 
     position: absolute; 
-  top: 50%; 
+    top: 50%; 
 }
-.MBS{
+
+/* Styling for the MBS element */
+.MBS {
     border: 0;
 }
 
+/* Styling for images */
 img {
     width: 35vh;
 }
 
+/* Styling for sections in the bottom part of the main body */
 .mainBodyBottomSections {
     transform: translate(-100%, 0); 
     display: flex;
@@ -144,8 +191,11 @@ img {
     width: 100%;
     font-family: IBM Plex Sans Condensed;
     flex-direction: row;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
+/* Styling for mid-sections in the bottom part of the main body */
 .midMainBodyBottomSections {
     transform: translate(100%, 0); 
     display: flex;
@@ -154,8 +204,11 @@ img {
     width: 100%;
     font-family: IBM Plex Sans Condensed;
     flex-direction: row;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
+/* Styling for MBS1a element */
 .MBS1a {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 100%;
@@ -166,6 +219,7 @@ img {
     padding: 5%;
 }
 
+/* Styling for MBS1b element */
 .MBS1b {
     margin-left: 5%;
     border-radius: 20px;
@@ -173,10 +227,11 @@ img {
     padding: 1%;
     padding-left: 20px;
     padding-right: 20px;
-    width: 50%;
-    box-shadow: -5px 5px rgba(0,0,0, .1);
+    width: 40%;
+    box-shadow: -5px 5px rgba(0, 0, 0, .1);
 }
 
+/* Styling for MBS2a element */
 .MBS2a {
     margin-right: 5%;
     border-radius: 20px;
@@ -184,10 +239,11 @@ img {
     padding: 1%;
     padding-left: 20px;
     padding-right: 20px; 
-    width: 50%;
-    box-shadow: -5px 5px rgba(0,0,0, .1);
+    width: 40%;
+    box-shadow: -5px 5px rgba(0, 0, 0, .1);
 }
 
+/* Styling for MBS2b element */
 .MBS2b {
     background-color: rgba(207, 206, 206, 0.5);
     border-radius: 100%;
@@ -198,6 +254,7 @@ img {
     padding: 5%;
 }
 
+/* Styling for MBS3a element */
 .MBS3a {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 100%;
@@ -208,6 +265,7 @@ img {
     padding: 5%;
 }
 
+/* Styling for MBS3b element */
 .MBS3b {
     margin-left: 3%;
     border-radius: 20px;
@@ -215,11 +273,12 @@ img {
     padding: 1%;
     padding-left: 20px;
     padding-right: 20px;
-    width: 50%;
-    box-shadow: -5px 5px rgba(0,0,0, .1);
+    width: 40%;
+    box-shadow: -5px 5px rgba(0, 0, 0, .1);
 }
 
-.mainBodyBottomSections h4{
+/* Styling for h4 elements in the bottom sections */
+.mainBodyBottomSections h4 {
     font-size: max(14px, 1.2vw);
     width: 100%;
     padding-left: 0px;
@@ -227,7 +286,8 @@ img {
     text-align: center;
 }
 
-.midMainBodyBottomSections h4{
+/* Styling for h4 elements in the mid-bottom sections */
+.midMainBodyBottomSections h4 {
     font-size: max(14px, 1.2vw);
     width: 100%;
     padding-left: 0px;
@@ -235,18 +295,21 @@ img {
     text-align: center;
 }
 
-.mainBodyBottomSections p{
+/* Styling for p elements in the bottom sections */
+.mainBodyBottomSections p {
     cursor: default;
     transition: all 1s ease;
     font-size: max(10px, .9vw);
 }
 
-.midMainBodyBottomSections p{
+/* Styling for p elements in the mid-bottom sections */
+.midMainBodyBottomSections p {
     cursor: default;
     transition: all 1s ease;
     font-size: max(10px, .9vw);
 }
 
+/* Styling for the bottom section of the page */
 #bottomSection {
     width: 50%;
     margin-left: 25%;
@@ -266,6 +329,8 @@ img {
     justify-content: center;
     border-radius: 50px;
 }
+
+/* Styling for the pseudo-element before the bottom section */
 #bottomSection::before {
     content: "";
     position: absolute;
@@ -279,20 +344,23 @@ img {
     background-color: #afafaf; 
 }
 
-#bottomSection h1{
+/* Styling for h1 elements in the bottom section */
+#bottomSection h1 {
     margin-left: 2%;
     margin-right: 2%;
     transition: all 1s ease;
     font-size: max(14px, 1.2vw);
 }
 
-#bottomSection p{
+/* Styling for p elements in the bottom section */
+#bottomSection p {
     margin-left: .25%;
     margin-right: .25%;
     transition: all 1s ease;
     font-size: max(14px, 1.2vw);
 }
 
+/* Styling for links in the bottom section */
 #bottomSection a {
     margin-left: 2%;
     margin-right: 2%;
@@ -301,22 +369,27 @@ img {
     color: rgb(255, 255, 255);
 }
 
+/* Styling for links in the bottom section on hover */
 #bottomSection a:link {
     text-decoration: underline;
 }
 
+/* Styling for links in the bottom section when visited */
 #bottomSection a:visited {
     text-decoration: underline;
 }
 
+/* Styling for links in the bottom section on hover */
 #bottomSection a:hover {
     text-decoration: underline;
 }
 
+/* Styling for links in the bottom section when active */
 #bottomSection a:active {
     text-decoration: underline;
 }
 
+/* Styling for the scroll-to-top button */
 .scrollToTop {
     transition: all .35s ease-in;
     opacity: 0.2;
@@ -332,6 +405,8 @@ img {
     width: 6vh;
     background-color: #e6e6e6;
 }
+
+/* Styling for the scroll-to-top button icon */
 .scrollToTop button {
     font-size: 2.5vw;
     width: 100%;
@@ -340,40 +415,99 @@ img {
     background: none;
 }
 
+/* Styling for the canvas element */
 canvas {
     z-index: -50;
-    background-color:#153142;
+    background-color: #153142;
     position: fixed;
     top: 0;
     left: 0;
 }
 
+/* Enabling smooth scrolling behavior for HTML */
 html {
     scroll-behavior: smooth;
 }
 
+/* Media query for screens with a maximum width of 480px */
 @media screen and (max-width: 480px) {
-    .mainBodyTop {width: min(75%, fit-content);}
-    .mainBodyTopText {width: min(75%, fit-content);}
-    .mainBodyBottomSections{ flex-direction: column};
-    .midMainBodyBottomSections{ flex-direction: column};
-    .MBS1b{ width: 50vh};
-    .MBS2a{ width: 50vh};
-    .MBS3b{ width: 50vh};
+    .mainBodyTop {
+        width: min(75%, fit-content);
+    }
+    .mainBodyTopText {
+        width: min(75%, fit-content);
+    }
+    .mainBodyBottomSections {
+        flex-direction: column;
+    }
+    .midMainBodyBottomSections {
+        flex-direction: column;
+    }
+    .MBS1b {
+        width: 50vh;
+    }
+    .MBS2a {
+        width: 50vh;
+    }
+    .MBS3b {
+        width: 50vh;
+    }
 }
 
-@media screen and (max-width: 480px) {
-    .midMainBodyBottomSections{ flex-direction: column-reverse};
-}
-
+/* Media query for screens with a minimum width of 480px */
 @media screen and (min-width: 480px) {
-    .mainBodyBottomSections{ flex-direction: row};
-    .midMainBodyBottomSections{ flex-direction: row};
-    .MBS1b{ width: 50%};
-    .MBS2a{ width: 50%};
-    .MBS3b{ width: 50%};
+    .mainBodyBottomSections {
+        flex-direction: row;
+    }
+    .midMainBodyBottomSections {
+        flex-direction: row;
+    }
+    .MBS1b {
+        width: 50%;
+    }
+    .MBS2a {
+        width: 50%;
+    }
+    .MBS3b {
+        width: 50%;
+    }
 }
 
+/* Media query for screens with a minimum width of 760px */
+@media screen and (min-width: 760px) {
+    .cursor {
+        display: flex;
+    }
+    .MBS1a img {
+        width: 25vh;
+    }
+    .MBS2b img {
+        width: 25vh;
+    }
+    .MBS3a img {
+        width: 25vh;
+    }
+}
+
+/* Media query for screens with a maximum width of 760px */
+@media screen and (max-width: 760px) {
+    .cursor {
+        display: none;
+    }
+    .MBS1a img {
+        width: 10vh;
+    }
+    .MBS2b img {
+        width: 10vh;
+    }
+    .MBS3a img {
+        width: 10vh;
+    }
+}
+
+/* Media query for screens with a minimum width of 480px */
 @media screen and (min-width: 480px) {
-    .midMainBodyBottomSections{ flex-direction: row};
+    .midMainBodyBottomSections {
+        flex-direction: row;
+    }
 }

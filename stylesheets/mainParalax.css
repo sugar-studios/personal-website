@@ -1,133 +1,149 @@
+/* Importing a Google Font for the page */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
-:root{
---color: #dddddd; 
+/* Setting root-level CSS variables */
+:root {
+    --color: #dddddd; /* Define a custom color variable */
 }
 
+/* Styling for the entire body of the page */
 body {
-  font-family: 'Red Hat Text', sans-serif;
+    font-family: 'Red Hat Text', sans-serif; /* Apply the imported font */
 }
 
+/* Styling for a container element */
 .container {
-  width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
-  background-size: cover;
-  background-position: center;
-  
-/*  this is where the magic happens:  */
-  background-attachment: fixed;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Background fixed to viewport */
 }
 
+/* Styling for elements with class "blank" and "other" */
 .blank,
 .other {
-  background-attachment: fixed !important;
-  width: 100%;
-  min-height: 15vh;
-  background-color: var(--color);
+    background-attachment: fixed !important; /* Force fixed background */
+    width: 100%;
+    min-height: 15vh;
+    background-color: var(--color); /* Use the custom color variable */
 }
 
+/* Styling for elements with class "blank2" */
 .blank2 {
     width: 100%;
     min-height: 10vh;
-    background-color: var(--color);
+    background-color: var(--color); /* Use the custom color variable */
 }
 
+/* Styling for elements with class "first" */
 .first {
-    background-color: var(--color);
-    background-image: none !important;
+    background-color: var(--color); /* Use the custom color variable */
+    background-image: none !important; /* Remove background image */
     min-height: 90vh;
 }
 
+/* Styling for elements with class "second" */
 .second {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image:url(/images/About-Mono.png);
-  background-attachment: fixed;
-  height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/images/About-Mono.png);
+    background-attachment: fixed; /* Background fixed to viewport */
+    height: 70vh;
 }
 
+/* Styling for elements with class "third" */
 .third {
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(/images/Code-mono.png);
-    background-attachment: fixed;
+    background-attachment: fixed; /* Background fixed to viewport */
     height: 70vh;
 }
 
+/* Styling for elements with class "forth" */
 .forth {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image:url(/images/Why-Mono.png);
-    background-attachment: fixed;
+    background-image: url(/images/Why-Mono.png);
+    background-attachment: fixed; /* Background fixed to viewport */
     height: 70vh;
 }
 
+/* Styling for elements with class "second-img" */
 .second-img {
-  background-image:url(/images/About-Color.jpg);
-  background-attachment: fixed;
-  height: 15vh !important;
+    background-image: url(/images/About-Color.jpg);
+    background-attachment: fixed; /* Background fixed to viewport */
+    height: 15vh !important;
 }
 
+/* Styling for elements with class "third-img" */
 .third-img {
-    background-image:url(/images/Code-Color.png);
-    background-attachment: fixed;
+    background-image: url(/images/Code-Color.png);
+    background-attachment: fixed; /* Background fixed to viewport */
     height: 15vh !important;
 }
 
+/* Styling for elements with class "forth-img" */
 .forth-img {
-    background-image:url(/images/Why-Color.jpg);
-    background-attachment: fixed;
+    background-image: url(/images/Why-Color.jpg);
+    background-attachment: fixed; /* Background fixed to viewport */
     height: 15vh !important;
 }
 
+/* Styling for links within elements with class "card" */
 .card > a {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 
+/* Styling for elements with class "item" */
 .item {
-  display: flex;
-  max-width: 320px;
-  background-color: white;;
-  flex-direction: column;
-  align-items: center;
-  border-radius: .5em;
-  -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    display: flex;
+    max-width: 320px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .5em;
+    -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
 }
 
+/* Styling for elements with class "img-first" */
 .img-first {
-  width: 90%;
-  height: 200px;
-  background-color: lightgrey;
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  border-radius: .3em;
-  background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+    width: 90%;
+    height: 200px;
+    background-color: lightgrey;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: .3em;
+    background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
 }
 
+/* Styling for elements with class "img-second" */
 .img-second {
-  width: 90%;
-  height: 200px;
-  background-color: lightgrey;
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  border-radius: .3em;
-  background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
+    width: 90%;
+    height: 200px;
+    background-color: lightgrey;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: .3em;
+    background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
 }
 
+/* Styling for elements with class "img-third" */
 .img-third {
-  width: 90%;
-  height: 200px;
-  background-color: lightgrey;
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  border-radius: .3em;
-  background-image: url(https://images.unsplash.com/photo-1632853073412-782bf0279d65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    width: 90%;
+    height: 200px;
+    background-color: lightgrey;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: .3em;
+    background-image: url(https://images.unsplash.com/photo-1632853073412-782bf0279d65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
 }
