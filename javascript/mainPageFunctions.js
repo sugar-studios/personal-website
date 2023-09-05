@@ -1,3 +1,11 @@
+/*
+Alexander Calkins
+Personal Website
+9/1/2023
+*/
+
+
+//this is what makes the front page text cycle
 function Typer() {
     const messages = [
         "Hello There!",
@@ -14,6 +22,8 @@ function Typer() {
     let i = 0;
     let message = null;
     
+
+    //This types the text
     function typeText() {
         if (message === null) {
         if (isTyping && i < messages[currentMessageIndex].length) {
@@ -38,6 +48,7 @@ function Typer() {
 
     }
 
+    //this backspaces the text
     function untypeText() {
         if (i > 0) {
             typingAnimation.innerHTML = messages[currentMessageIndex].substring(0, i - 1);
@@ -53,6 +64,8 @@ function Typer() {
     typeText();
 }
 
+
+//this is for observing a page (for slide animations)
 function handleIntersection(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -73,6 +86,9 @@ const observer = new IntersectionObserver(handleIntersection, options);
 observer.observe(document.getElementById("introText"));
 
 
+
+//this creates observers that wait for the scoll position to interect with them, where they will add a class to 
+//each card that will play an animation
 function SlideAnimations() {
     const startAnimation = (entries, observer) => {
         entries.forEach(entry => {
@@ -100,6 +116,8 @@ function SlideAnimations() {
     });
 }
 
+
+//This is the code to scroll to top button
 function ScrollCheck() {
     const scrollButton = document.getElementById("scrollToTop");
     scrollButton.style.opacity = 0;

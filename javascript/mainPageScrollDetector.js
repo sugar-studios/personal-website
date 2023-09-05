@@ -1,7 +1,16 @@
+/*
+Alexander Calkins
+Personal Website
+9/1/2023
+*/
+
+
+
+
+//This code creates a message to the user to scroll down if they wait too long
 let userScroll = false;
 const x = document.getElementById("snackbar");
 
-console.log("hey");
 
 setTimeout(()=>{
     if (userScroll === false) {
@@ -13,12 +22,15 @@ document.addEventListener("scroll", ()=>{
     userScroll = true;
 })
 
+
+//this makes it wait for the user to scroll
 function notify(message) {
     x.innerHTML = message;
     x.className = "show";
     checkFlag();
 }
 
+// this makes the message stay until scroll
 function checkFlag() {
     if(userScroll === false) {
        window.setTimeout(checkFlag, 100);

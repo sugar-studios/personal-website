@@ -1,3 +1,11 @@
+/*
+Alexander Calkins
+Personal Website
+9/1/2023
+*/
+
+
+//this is form validation
 function sendEmail() {
     const clientEmail = document.getElementById("clientEmail").value;
     const content = document.getElementById("content").value;
@@ -48,6 +56,7 @@ document.getElementById("clientEmailLabel").addEventListener("focus", ()=>{
     document.getElementById("clientEmailLabel")
 })
 
+//notifcation for error messages
 function notify(message) {
     let x = document.getElementById("snackbar");
     x.innerHTML = message;

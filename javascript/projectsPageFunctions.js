@@ -1,3 +1,12 @@
+/*
+Alexander Calkins
+Personal Website
+9/1/2023
+*/
+
+
+
+//This function changes the backgorund of page when an item is selected (unused)
 function GetImage(ele) {
     let IdImageEntries = '{"projects": [' +
     '{"id": "p-EnterPresser", "image": "images/enterPresser.png"},'+

@@ -1,3 +1,11 @@
+/*
+Alexander Calkins
+Personal Website
+9/1/2023
+*/
+
+
+//this creates canvas particles (unused)
 const canvas = document.getElementById('particle-canvas');
 const context = canvas.getContext('2d');
 canvas.width = window.innerWidth;

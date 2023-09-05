@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Website</title>
+</head>
+<body>
+    <h1>Text-to-Speech Blocks</h1>
+
+    <div class="block">
+        <p>Block 1: This is the first block of text.</p>
+        <button class="speak-button">Speak</button>
+    </div>
+
+    <div class="block">
+        <p>Block 2: Here's another block of text.</p>
+        <button class="speak-button">Speak</button>
+    </div>
+
+    <div class="block">
+        <p>Block 3: One more block for good measure.</p>
+        <button class="speak-button">Speak</button>
+    </div>
+
+    <script>
+        // Function to speak the text within a block
+        function speakText(text) {
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = text;
+            speechSynthesis.speak(speech);
+        }
+
+        // Add click event listeners to all speak buttons
+        const speakButtons = document.querySelectorAll('.speak-button');
+        speakButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const text = this.parentElement.querySelector('p').textContent;
+                speakText(text);
+            });
+        });
+    </script>
+</body>
+</html>
